@@ -3,7 +3,12 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				red: "var(--red)",
+        purple: "var(--purple)",
+			}
+		}
 	},
 
 	plugins: []
