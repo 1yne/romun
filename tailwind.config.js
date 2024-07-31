@@ -7,7 +7,12 @@ export default {
 			colors: {
 				red: "var(--red)",
         purple: "var(--purple)",
+				black: "var(--black)"
 			}
+		},
+		fontFamily: {
+			'playfair': "Playfair Display",
+			'montserrat': "Montserrat"
 		}
 	},
 
