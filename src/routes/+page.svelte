@@ -1,19 +1,6 @@
-<script lang="ts">
-  import { Card } from "flowbite-svelte"
-  import { HRCLogo, UNSCLogo } from "$lib";
-</script>
-
 <div class="w-full">
-  <div class="w-full flex items-center flex-col gap-4">
-    <h1 class="font-montserrat font-extrabold text-9xl text-white mt-24">RoMUN VIII</h1>
-    <h1 class="font-montserrat font-semibold text-4xl text-white">2024</h1>
-  </div>
-
-  <div>
-    {#each [HRCLogo, UNSCLogo] as item}
-      <Card>
-        <HRCLogo width={200} fill="D60202" />
-      </Card>
-    {/each}
-  </div>
+	<div class="flex w-full flex-col items-center gap-4 py-24">
+		<h1 class="font-montserrat text-9xl font-extrabold text-white">RoMUN VIII</h1>
+		<h1 class="font-montserrat text-4xl font-semibold text-white">2024</h1>
+	</div>
 </div>
