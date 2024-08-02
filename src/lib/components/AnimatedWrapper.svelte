@@ -16,8 +16,6 @@
   }}
 >
   {#if isInView}
-    <div class="box">
-      <slot />
-    </div>
+    <slot />
   {/if}
 </div>
