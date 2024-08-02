@@ -16,7 +16,7 @@
   }}
 >
   {#if isInView}
-    <div in:fly={{ y: 50 }} class="box">
+    <div class="box">
       <slot />
     </div>
   {/if}
