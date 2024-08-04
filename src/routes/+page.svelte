@@ -8,24 +8,24 @@
 
 	const props = {
 		fill: 'D60202',
-		width: 200
+		width: 150
 	};
 
 	const logos = [
 		{
-      logo: UNSCLogo,
+			logo: UNSCLogo,
 			name: 'UNSC'
 		},
 		{
 			logo: HRCLogo,
-      name: 'HRC'
+			name: 'HRC'
 		},
 		{
 			logo: UPILogo,
-      name: 'UPI'
+			name: 'UPI'
 		},
-    {
-      logo: UNSCLogo,
+		{
+			logo: UNSCLogo,
 			name: 'DISEC'
 		}
 	];
@@ -46,16 +46,38 @@
 		</AnimatedWrapper>
 	</div>
 	<div class="px-12">
-    <h1 class="text-white text-3xl font-bold mb-6">COMMITTEES</h1>
-		<AnimatedWrapper divClass="w-full flex justify-between">
-      {#each logos as logo, i}
-        <div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
-          <Card class="!flex !items-center !bg-black hover:scale-[1.02] duration-300 hover:border-red">
-                <svelte:component this={logo.logo} {...props}></svelte:component>
-          </Card>
-          <h1 class="text-xl font-bold text-white">{logo.name}</h1>
-        </div>
-      {/each}
-    </AnimatedWrapper>
+		<AnimatedWrapper divClass="w-full">
+			<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
+			<div class="flex w-full justify-around">
+				{#each logos as logo, i}
+					<div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
+						<Card
+							class="!flex !items-center !bg-black duration-300 hover:scale-[1.02] hover:border-red"
+						>
+							<svelte:component this={logo.logo} {...props}></svelte:component>
+						</Card>
+						<h1 class="text-xl font-bold text-white">{logo.name}</h1>
+					</div>
+				{/each}
+			</div>
+		</AnimatedWrapper>
+	</div>
+	<div class="px-12 bgBlack text-white py-12 text-center">
+		<p>
+			The Model United Nations (MUN) competition at Royale Concorde International School is set to
+			be an exhilarating and intellectually stimulating event, drawing students from various schools
+			to engage in dynamic diplomatic simulations. The conference will feature a
+			range of committees, each focusing on specific topics such as climate change, international
+			security, and human rights, offering students a platform to showcase their research, public
+			speaking, and problem-solving skills. With a dedicated team of faculty advisors and guest
+			speakers providing guidance, the MUN at Royale Concorde promises to be a hallmark of academic
+			excellence and international awareness.
+		</p>
 	</div>
 </div>
+
+<style>
+	.bgBlack {
+		background-color: black;
+	}
+</style>
