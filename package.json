@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@svelteuidev/composables": "^0.15.7",
 		"svelte-inview": "^4.0.2"
 	}
 }
