@@ -1,9 +1,13 @@
-<script>
+<script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { Card } from 'flowbite-svelte';
 	import UNSCLogo from '$lib/components/UNSC.svelte';
 	import HRCLogo from '$lib/components/HRC.svelte';
 	import UPILogo from '$lib/components/UPI.svelte';
+	import { io } from '@svelteuidev/composables';
+
+	let visible: boolean;
+	const handleChange = ({ detail }) => (visible = detail.inView);
 
 	const props = {
 		fill: 'D60202',
@@ -35,17 +39,31 @@
 		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24" />
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
-		<div class="flex w-full flex-col items-center text-center">
-			<h1 class="font-montserrat text-9xl font-extrabold text-white">RoMUN VIII</h1>
-			<h1 class="mt-3 font-montserrat text-4xl font-semibold text-white">2024</h1>
-			<button
-				class="button button--bestia relative mt-12 bg-none p-0 font-montserrat text-xl text-white"
-			>
-				<div
-					class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-				></div>
-				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
-			</button>
+		<div
+			class="flex w-full flex-col items-center text-center"
+			use:io={{ threshold: 1 }}
+			on:change={handleChange}
+		>
+			{#if visible}
+				<h1 class="font-montserrat text-9xl font-extrabold text-white" in:fly={{ y: 20 }}>
+					RoMUN VIII
+				</h1>
+				<h1
+					class="mt-6 font-montserrat text-4xl font-semibold text-white"
+					in:fly={{ y: 20, delay: 100 }}
+				>
+					2024
+				</h1>
+				<button
+					class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+					in:fly={{ y: 20, delay: 200 }}
+				>
+					<div
+						class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+					></div>
+					<span class="relative block px-12 py-6 text-sm">REGISTER</span>
+				</button>
+			{/if}
 		</div>
 	</div>
 	<div class="bgBlack px-12">
