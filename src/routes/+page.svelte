@@ -4,10 +4,11 @@
 	import UNSCLogo from '$lib/components/UNSC.svelte';
 	import HRCLogo from '$lib/components/HRC.svelte';
 	import UPILogo from '$lib/components/UPI.svelte';
+	import AIPPMLogo from '$lib/components/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
 
-	let visible: boolean;
-	const handleChange = ({ detail }) => (visible = detail.inView);
+	let visible: boolean
+	const handleChange = () => (visible = true)
 
 	const props = {
 		fill: 'D60202',
@@ -30,6 +31,18 @@
 		{
 			logo: UNSCLogo,
 			name: 'DISEC'
+		},
+		{
+			logo: UNSCLogo,
+			name: 'CCC'
+		},
+		{
+			logo: AIPPMLogo,
+			name: 'AIPPM'
+		},
+		{
+			logo: UNSCLogo,
+			name: 'UNODC'
 		}
 	];
 </script>
@@ -69,14 +82,26 @@
 	<div class="bgBlack px-12">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
 		<div class="flex w-full justify-around">
-			{#each logos as logo, i}
+			{#each [0, 1, 2, 3] as i}
 				<div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
 					<Card
 						class="!flex !items-center !bg-black duration-300 hover:scale-[1.02] hover:border-red"
 					>
-						<svelte:component this={logo.logo} {...props}></svelte:component>
+						<svelte:component this={logos[i].logo} {...props}></svelte:component>
 					</Card>
-					<h1 class="text-xl font-bold text-white">{logo.name}</h1>
+					<h1 class="text-xl font-bold text-white">{logos[i].name}</h1>
+				</div>
+			{/each}
+		</div>
+		<div class="mt-12 flex w-full justify-around">
+			{#each [4, 5, 6] as i}
+				<div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
+					<Card
+						class="!flex !items-center !bg-black duration-300 hover:scale-[1.02] hover:border-red"
+					>
+						<svelte:component this={logos[i].logo} {...props}></svelte:component>
+					</Card>
+					<h1 class="text-xl font-bold text-white">{logos[i].name}</h1>
 				</div>
 			{/each}
 		</div>
