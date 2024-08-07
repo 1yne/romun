@@ -93,7 +93,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bgBlack px-12 py-12">
+	<div class="bgBlack px-12 py-12 pt-24">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>ABOUT</h1>
 		<p class="text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
