@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { Card } from 'flowbite-svelte';
 	import UNSCLogo from '$lib/components/UNSC.svelte';
 	import HRCLogo from '$lib/components/HRC.svelte';
 	import UPILogo from '$lib/components/UPI.svelte';
@@ -81,27 +80,15 @@
 	</div>
 	<div class="bgBlack px-12">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
-		<div class="flex w-full justify-around">
-			{#each [0, 1, 2, 3] as i}
-				<div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
-					<Card
-						class="!flex !items-center !bg-black duration-300 hover:scale-[1.02] hover:border-red"
+		<div class="flex w-full justify-between">
+			{#each logos as logo}
+				<div class="flex-col justify-center gap-6">
+					<div
+						class="flex min-h-96 items-center justify-center border border-solid border-white/30 p-4 transition-all hover:border-white"
 					>
-						<svelte:component this={logos[i].logo} {...props}></svelte:component>
-					</Card>
-					<h1 class="text-xl font-bold text-white">{logos[i].name}</h1>
-				</div>
-			{/each}
-		</div>
-		<div class="mt-12 flex w-full justify-around">
-			{#each [4, 5, 6] as i}
-				<div class="flex flex-col items-center gap-4" in:fly||global={{ x: -50, delay: i * 100 }}>
-					<Card
-						class="!flex !items-center !bg-black duration-300 hover:scale-[1.02] hover:border-red"
-					>
-						<svelte:component this={logos[i].logo} {...props}></svelte:component>
-					</Card>
-					<h1 class="text-xl font-bold text-white">{logos[i].name}</h1>
+						<svelte:component this={logo.logo} {...props}></svelte:component>
+					</div>
+					<h1 class="mt-4 text-xl font-bold text-white">{logo.name}</h1>
 				</div>
 			{/each}
 		</div>
