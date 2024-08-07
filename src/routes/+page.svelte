@@ -6,8 +6,8 @@
 	import AIPPMLogo from '$lib/components/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
 
-	let visible: boolean
-	const handleChange = () => (visible = true)
+	let visible: boolean;
+	const handleChange = () => (visible = true);
 
 	const props = {
 		fill: 'D60202',
@@ -105,6 +105,17 @@
 			providing guidance, the MUN at RCIS promises to be a hallmark of academic excellence and
 			international awareness.
 		</p>
+	</div>
+	<div class="flex w-full justify-center bgBlack py-12 pb-24">
+		<button
+			class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+			in:fly={{ y: 20, delay: 200 }}
+		>
+			<div
+				class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+			></div>
+			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
+		</button>
 	</div>
 </div>
 
