@@ -64,7 +64,7 @@
 					class="mt-6 font-montserrat text-4xl font-semibold text-white"
 					in:fly={{ y: 20, delay: 100 }}
 				>
-					2024
+					October 2024
 				</h1>
 				<button
 					class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
