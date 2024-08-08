@@ -46,6 +46,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>RoMUN 2024 - Royale Concorde International School, Kalyan Nagar</title>
+</svelte:head>
+
 <div class="w-full font-montserrat">
 	<div class="absolute flex h-28 w-full px-12 py-4">
 		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24" />
