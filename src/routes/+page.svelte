@@ -58,32 +58,35 @@
 		>
 			{#if visible}
 				<h1
-					class="font-montserrat font-extrabold text-white max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl transition-all"
+					class="font-montserrat font-extrabold text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
 					in:fly={{ y: 20 }}
 				>
 					RoMUN VIII
 				</h1>
 				<h1
-					class="font-montserrat font-semibold text-white max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl transition-all"
+					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
 					in:fly={{ y: 20, delay: 100 }}
 				>
 					October 2024
 				</h1>
 				<button
-					class="button button--bestia max relative bg-none p-0 font-montserrat text-xl text-white max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8 transition-all"
+					class="button button--bestia max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
 					in:fly={{ y: 20, delay: 200 }}
 				>
 					<div
 						class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
 					></div>
-					<span class="relative block px-12 py-6 text-sm max-[645px]:px-8 max-[645px]:py-4 transition-all">REGISTER</span>
+					<span
+						class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
+						>REGISTER</span
+					>
 				</button>
 			{/if}
 		</div>
 	</div>
 	<div class="bgBlack px-12">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
-		<div class="flex w-full justify-between gap-2">
+		<div class="flex w-full justify-between gap-2 overflow-x-scroll noScrollbar">
 			{#each logos as logo}
 				<div class="flex-col justify-center gap-6">
 					<div
@@ -179,5 +182,10 @@
 		opacity: 1;
 		transition-duration: 0.01s;
 		transition-delay: 0.3s;
+	}
+
+	.noScrollbar {
+		-ms-overflow-style: none;
+    scrollbar-width: none;;
 	}
 </style>
