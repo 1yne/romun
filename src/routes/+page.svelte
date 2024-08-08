@@ -61,13 +61,13 @@
 					RoMUN VIII
 				</h1>
 				<h1
-					class="mt-6 font-montserrat text-4xl font-semibold text-white"
+					class="mt-5 font-montserrat text-3xl font-semibold text-white"
 					in:fly={{ y: 20, delay: 100 }}
 				>
 					October 2024
 				</h1>
 				<button
-					class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+					class="button button--bestia relative mt-8 bg-none p-0 font-montserrat text-xl text-white"
 					in:fly={{ y: 20, delay: 200 }}
 				>
 					<div
@@ -84,7 +84,7 @@
 			{#each logos as logo}
 				<div class="flex-col justify-center gap-6">
 					<div
-						class="flex min-h-96 items-center justify-center border border-solid border-white/30 p-4 transition-all hover:border-white"
+						class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
 					>
 						<svelte:component this={logo.logo} {...props}></svelte:component>
 					</div>
@@ -93,7 +93,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bgBlack px-12 py-12 pt-24">
+	<div class="bgBlack px-12 py-8 pt-24">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>ABOUT</h1>
 		<p class="text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
