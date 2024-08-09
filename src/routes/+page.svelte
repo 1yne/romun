@@ -48,6 +48,10 @@
 
 <svelte:head>
 	<title>RoMUN 2024 - Royale Concorde International School, Kalyan Nagar</title>
+	<meta
+		name="description"
+		content="Join us for an enriching experience at the Royale Concorde International School Model United Nations Conference 2024! Set in the heart of our prestigious campus, this year’s MUN promises to be a dynamic and transformative event, bringing together young leaders and aspiring diplomats from around the globe."
+	/>
 </svelte:head>
 
 <div class="w-full font-montserrat">
@@ -90,7 +94,7 @@
 	</div>
 	<div class="bgBlack px-12">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
-		<div class="flex w-full justify-between gap-2 overflow-x-scroll noScrollbar">
+		<div class="noScrollbar flex w-full justify-between gap-2 overflow-x-scroll">
 			{#each logos as logo}
 				<div class="flex-col justify-center gap-6">
 					<div
@@ -190,6 +194,6 @@
 
 	.noScrollbar {
 		-ms-overflow-style: none;
-    scrollbar-width: none;;
+		scrollbar-width: none;
 	}
 </style>
