@@ -5,6 +5,7 @@
 	import UPILogo from '$lib/components/UPI.svelte';
 	import AIPPMLogo from '$lib/components/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
+	import LogoGithub from "carbon-icons-svelte/lib/LogoGithub.svelte";
 
 	let visible: boolean;
 	const handleChange = () => (visible = true);
@@ -130,6 +131,11 @@
 			></div>
 			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 		</button>
+	</div>
+	<div class="px-12 pb-12 bg-black flex justify-end">
+		<a href="https://github.com/1yne" target="_blank">
+			<LogoGithub class="text-white hover:text-red transition-all" size={24} />
+		</a>
 	</div>
 </div>
 
