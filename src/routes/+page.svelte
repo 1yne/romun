@@ -92,7 +92,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="bgBlack px-12">
+	<div class="bg-black px-12">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
 		<div class="noScrollbar flex w-full justify-between gap-2 overflow-x-scroll">
 			{#each logos as logo}
@@ -107,7 +107,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bgBlack px-12 py-8 pt-24">
+	<div class="bg-black px-12 py-8 pt-24">
 		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>ABOUT</h1>
 		<p class="text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
@@ -120,7 +120,7 @@
 			international awareness.
 		</p>
 	</div>
-	<div class="bgBlack flex w-full justify-center py-12 pb-24">
+	<div class="bg-black flex w-full justify-center py-12 pb-24">
 		<button
 			class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
 			in:fly={{ y: 20, delay: 200 }}
@@ -134,10 +134,6 @@
 </div>
 
 <style>
-	.bgBlack {
-		background-color: black;
-	}
-
 	.button::before,
 	.button::after {
 		position: absolute;
