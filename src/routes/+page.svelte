@@ -5,7 +5,10 @@
 	import UPILogo from '$lib/components/UPI.svelte';
 	import AIPPMLogo from '$lib/components/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
-	import LogoGithub from "carbon-icons-svelte/lib/LogoGithub.svelte";
+	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+	import { onMount } from 'svelte';
 
 	let visible: boolean;
 	const handleChange = () => (visible = true);
@@ -45,6 +48,62 @@
 			name: 'UNODC'
 		}
 	];
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.to('.committees', {
+			scrollTrigger: '.committees',
+			x: 0,
+			duration: 0.75,
+			opacity: 1,
+			startAt: {
+				x: -400,
+				opacity: 0
+			},
+			ease: "power2"
+		});
+		gsap.to('.committeesHeading', {
+			scrollTrigger: '.committeesHeading',
+			duration: 1,
+			opacity: 1,
+			startAt: {
+				opacity: 0
+			},
+			ease: "power2"
+		});
+		gsap.to('.about', {
+			scrollTrigger: '.about',
+			x: 0,
+			duration: 0.75,
+			opacity: 1,
+			startAt: {
+				x: -400,
+				opacity: 0
+			},
+			ease: "power2"
+		});
+		gsap.to('.aboutHeading', {
+			scrollTrigger: '.aboutHeading',
+			duration: 1,
+			opacity: 1,
+			startAt: {
+				opacity: 0
+			},
+			ease: "power2"
+		});
+		gsap.to('.register', {
+			scrollTrigger: '.register',
+			y: 0,
+			duration: 1,
+			opacity: 1,
+			startAt: {
+				y: 40,
+				opacity: 0
+			},
+			ease: "power2"
+		});
+	});
+
 </script>
 
 <svelte:head>
@@ -56,7 +115,7 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<div class="absolute flex h-28 w-full px-12 max-[645px]:px-6 transition-all py-4">
+	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
 		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24" />
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
@@ -94,10 +153,12 @@
 		</div>
 	</div>
 	<div class="bg-black px-12">
-		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>COMMITTEES</h1>
-		<div class="noScrollbar flex w-full justify-between gap-2 overflow-x-scroll">
+		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
+			COMMITTEES
+		</h1>
+		<div class="noScrollbar committees flex w-full justify-between gap-2 overflow-x-scroll">
 			{#each logos as logo}
-				<div class="flex-col justify-center gap-6">
+				<div class="committees flex-col justify-center gap-6">
 					<div
 						class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
 					>
@@ -109,8 +170,10 @@
 		</div>
 	</div>
 	<div class="bg-black px-12 py-8 pt-24">
-		<h1 class="mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>ABOUT</h1>
-		<p class="text-lg text-white" in:fade>
+		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
+			ABOUT
+		</h1>
+		<p class="about text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
@@ -121,9 +184,9 @@
 			international awareness.
 		</p>
 	</div>
-	<div class="bg-black flex w-full justify-center py-12 pb-24">
+	<div class="flex w-full justify-center bg-black py-12 pb-24">
 		<button
-			class="button button--bestia relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+			class="button button--bestia register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
 			in:fly={{ y: 20, delay: 200 }}
 		>
 			<div
@@ -132,9 +195,9 @@
 			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 		</button>
 	</div>
-	<div class="px-12 pb-12 bg-black flex justify-end">
+	<div class="flex justify-end bg-black px-12 pb-12">
 		<a href="https://github.com/1yne" target="_blank">
-			<LogoGithub class="text-white hover:text-red transition-all" size={24} />
+			<LogoGithub class="text-white transition-all hover:text-red" size={24} />
 		</a>
 	</div>
 </div>
