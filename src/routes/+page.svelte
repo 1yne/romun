@@ -51,55 +51,37 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		gsap.to('.committees', {
+		gsap.from('.committees', {
 			scrollTrigger: '.committees',
-			x: 0,
+			x: -400,
 			duration: 0.75,
-			opacity: 1,
-			startAt: {
-				x: -400,
-				opacity: 0
-			},
+			opacity: 0,
 			ease: "power2"
 		});
-		gsap.to('.committeesHeading', {
+		gsap.from('.committeesHeading', {
 			scrollTrigger: '.committeesHeading',
 			duration: 1,
-			opacity: 1,
-			startAt: {
-				opacity: 0
-			},
+			opacity: 0,
 			ease: "power2"
 		});
-		gsap.to('.about', {
+		gsap.from('.about', {
 			scrollTrigger: '.about',
-			x: 0,
+			x: -400,
 			duration: 0.75,
-			opacity: 1,
-			startAt: {
-				x: -400,
-				opacity: 0
-			},
+			opacity: 0,
 			ease: "power2"
 		});
-		gsap.to('.aboutHeading', {
+		gsap.from('.aboutHeading', {
 			scrollTrigger: '.aboutHeading',
 			duration: 1,
-			opacity: 1,
-			startAt: {
-				opacity: 0
-			},
+			opacity: 0,
 			ease: "power2"
 		});
-		gsap.to('.register', {
+		gsap.from('.register', {
 			scrollTrigger: '.register',
-			y: 0,
+			y: 40,
 			duration: 1,
-			opacity: 1,
-			startAt: {
-				y: 40,
-				opacity: 0
-			},
+			opacity: 0,
 			ease: "power2"
 		});
 	});
