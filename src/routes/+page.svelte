@@ -51,6 +51,13 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
+		gsap.from('.rcisLogo', {
+			scrollTrigger: '.rcisLogo',
+			x: -400,
+			duration: 0.5,
+			opacity: 0,
+			ease: "power2"
+		});
 		gsap.from('.committees', {
 			scrollTrigger: '.committees',
 			x: -400,
@@ -98,7 +105,7 @@
 
 <div class="w-full font-montserrat">
 	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
-		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24" />
+		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24 rcisLogo" />
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
 		<div
