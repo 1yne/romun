@@ -53,7 +53,7 @@
 		gsap.registerPlugin(ScrollTrigger);
 		gsap.from('.rcisLogo', {
 			scrollTrigger: '.rcisLogo',
-			x: -400,
+			y: -40,
 			duration: 0.5,
 			opacity: 0,
 			ease: "power2"
