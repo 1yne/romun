@@ -7,7 +7,7 @@
 	import { io } from '@svelteuidev/composables';
 	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
 	import gsap from 'gsap';
-	import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
 	let visible: boolean;
@@ -56,43 +56,42 @@
 			y: -40,
 			duration: 0.5,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 		gsap.from('.committees', {
 			scrollTrigger: '.committees',
 			x: -400,
 			duration: 0.75,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 		gsap.from('.committeesHeading', {
 			scrollTrigger: '.committeesHeading',
 			duration: 1,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 		gsap.from('.about', {
 			scrollTrigger: '.about',
 			x: -400,
 			duration: 0.75,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 		gsap.from('.aboutHeading', {
 			scrollTrigger: '.aboutHeading',
 			duration: 1,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 		gsap.from('.register', {
 			scrollTrigger: '.register',
 			y: 40,
 			duration: 1,
 			opacity: 0,
-			ease: "power2"
+			ease: 'power2'
 		});
 	});
-
 </script>
 
 <svelte:head>
@@ -105,7 +104,7 @@
 
 <div class="w-full font-montserrat">
 	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
-		<img src="/RCISLogo.png" alt="RCIS Logo" class="w-24 rcisLogo" />
+		<img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" />
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
 		<div
