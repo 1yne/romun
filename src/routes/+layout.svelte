@@ -13,6 +13,47 @@
 	.bg {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
 			url('/heroSectionBG.png');
+		animation: pulse 2s infinite;
+		animation-direction: alternate;
+	}
+
+	@keyframes pulse {
+		0% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		12.5% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.4625), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		25% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		37.5% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3875), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		50% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		62.5% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3125), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		75% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.275), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		87.5% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.2375), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
+		100% {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+			url('/heroSectionBG.png');
+		}
 	}
 
 	/* TODO: choose one */
