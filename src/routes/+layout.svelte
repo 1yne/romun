@@ -13,7 +13,7 @@
 	.bg {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
 			url('/heroSectionBG.png');
-		animation: pulse 2s infinite;
+		animation: pulse 1s infinite;
 		animation-direction: alternate;
 	}
 
