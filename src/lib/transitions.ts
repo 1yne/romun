@@ -1,13 +1,6 @@
 import gsap from 'gsap';
 
 export function transitions() {
-  gsap.from('.rcisLogo', {
-    scrollTrigger: '.rcisLogo',
-    y: -40,
-    duration: 0.5,
-    opacity: 0,
-    ease: 'power2'
-  });
   gsap.from('.committees', {
     scrollTrigger: '.committees',
     x: -400,
