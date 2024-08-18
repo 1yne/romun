@@ -106,9 +106,9 @@
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
-		<div class="noScrollbar committees flex w-full justify-between gap-2 overflow-x-scroll">
+		<div class="noScrollbar committees flex w-full min-h-[28rem] justify-between gap-2 overflow-x-scroll">
 			{#each logos as logo}
-				<div class="committees flex-col justify-center gap-6">
+				<div class="flex-col justify-center gap-6">
 					<div
 						class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
 					>
@@ -210,5 +210,12 @@
 	.noScrollbar {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+	}
+
+	.committees {
+		scroll-snap-type: x mandatory;
+	}
+	.committees div {
+		scroll-snap-align: center;
 	}
 </style>
