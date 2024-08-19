@@ -52,7 +52,7 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		transitions()
+		transitions();
 	});
 </script>
 
@@ -65,8 +65,8 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6 rcisLogo">
-		<img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" />
+	<div class="rcisLogo absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
+		<a href="/"><img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" /></a>
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
 		<div
@@ -106,7 +106,9 @@
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
-		<div class="noScrollbar committees flex w-full min-h-[28rem] justify-between gap-2 overflow-x-scroll">
+		<div
+			class="noScrollbar committees flex min-h-[28rem] w-full justify-between gap-2 overflow-x-scroll"
+		>
 			{#each logos as logo}
 				<div class="flex-col justify-center gap-6">
 					<div
