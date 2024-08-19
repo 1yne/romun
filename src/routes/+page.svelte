@@ -65,7 +65,7 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
+	<div class="absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6 rcisLogo">
 		<img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" />
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
