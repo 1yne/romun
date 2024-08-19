@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import UNSCLogo from '$lib/components/UNSC.svelte';
-	import HRCLogo from '$lib/components/HRC.svelte';
-	import UPILogo from '$lib/components/UPI.svelte';
-	import AIPPMLogo from '$lib/components/AIPPM.svelte';
+	import UNSCLogo from '$lib/logos/UNSC.svelte';
+	import HRCLogo from '$lib/logos/HRC.svelte';
+	import UPILogo from '$lib/logos/UPI.svelte';
+	import AIPPMLogo from '$lib/logos/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
 	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
 	import gsap from 'gsap';
