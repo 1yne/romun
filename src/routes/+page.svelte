@@ -10,6 +10,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
+	import Navbar from '$lib/Navbar.svelte';
 
 	let visible: boolean;
 	const handleChange = () => (visible = true);
@@ -65,16 +66,8 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<div
-		class="rcisLogo absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6"
-		use:io={{ threshold: 1 }}
-		on:change={handleChange}
-	>
-		{#if visible}
-			<a href="/" in:fade><img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" /></a>
-		{/if}
-	</div>
-	<div class="heroSection flex min-h-screen items-center py-24">
+	<Navbar />
+	<div class="heroSection flex">
 		<div
 			class="flex w-full flex-col items-center text-center"
 			use:io={{ threshold: 1 }}
@@ -93,18 +86,20 @@
 				>
 					October 2024
 				</h1>
-				<button
-					class="button button--bestia max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
-					in:fly={{ y: 20, delay: 200 }}
-				>
-					<div
-						class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-					></div>
-					<span
-						class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
-						>REGISTER</span
+				<a href="/register">
+					<button
+						class="button button--bestia max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
+						in:fly={{ y: 20, delay: 200 }}
 					>
-				</button>
+						<div
+							class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+						></div>
+						<span
+							class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
+							>REGISTER</span
+						>
+					</button>
+				</a>
 			{/if}
 		</div>
 	</div>
@@ -223,7 +218,13 @@
 	.committees {
 		scroll-snap-type: x mandatory;
 	}
+
 	.committees div {
 		scroll-snap-align: center;
+	}
+
+	.heroSection {
+		min-height: calc(100vh - 7rem);
+		padding-top: calc(50vh - 17rem);
 	}
 </style>
