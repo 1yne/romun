@@ -139,15 +139,17 @@
 		</p>
 	</div>
 	<div class="flex w-full justify-center bg-black py-12 pb-24">
-		<button
-			class="button button--bestia register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
-			in:fly={{ y: 20, delay: 200 }}
-		>
-			<div
-				class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-			></div>
-			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
-		</button>
+		<a href="/register">
+			<button
+				class="button button--bestia register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+				in:fly={{ y: 20, delay: 200 }}
+			>
+				<div
+					class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+				></div>
+				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
+			</button>
+		</a>
 	</div>
 	<div class="flex justify-end bg-black px-12 pb-12">
 		<a href="https://github.com/1yne" target="_blank">
