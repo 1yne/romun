@@ -65,8 +65,14 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<div class="rcisLogo absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6">
-		<a href="/"><img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" /></a>
+	<div
+		class="rcisLogo absolute flex h-28 w-full px-12 py-4 transition-all max-[645px]:px-6"
+		use:io={{ threshold: 1 }}
+		on:change={handleChange}
+	>
+		{#if visible}
+			<a href="/" in:fade><img src="/RCISLogo.png" alt="RCIS Logo" class="rcisLogo w-24" /></a>
+		{/if}
 	</div>
 	<div class="heroSection flex min-h-screen items-center py-24">
 		<div
