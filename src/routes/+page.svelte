@@ -10,7 +10,9 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
-	import Navbar from '$lib/Navbar.svelte';
+	import type { PageData } from './$types';
+	
+	export let data: PageData;
 
 	let visible: boolean;
 	const handleChange = () => (visible = true);
@@ -53,7 +55,7 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		transitions();
+		if (!data.isDataRequest) transitions();
 	});
 </script>
 
