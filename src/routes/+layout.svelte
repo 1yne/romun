@@ -1,8 +1,24 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	import { onNavigate } from '$app/navigation';
+	import Navbar from '$lib/Navbar.svelte';
+
+	onNavigate((navigation) => {
+		// @ts-expect-error
+		if (!document.startViewTransition) return
+
+		return new Promise((resolve) => {
+			// @ts-expect-error
+			document.startViewTransition(async () => {
+				resolve()
+				await navigation.complete
+			})
+		})
+	})
 </script>
 
 <div class="bg h-screen">
+	<Navbar />
 	<slot></slot>
 </div>
 

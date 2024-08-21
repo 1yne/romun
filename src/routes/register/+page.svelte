@@ -1,8 +1,2 @@
-<script>
-  import Navbar from "$lib/Navbar.svelte";
-</script>
-
-<Navbar />
-<h1>test</h1>
-
-<a href="/">Back</a>
+<h1 class="text-white">test</h1>
+<a href="/" class="text-white">Back</a>

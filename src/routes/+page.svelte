@@ -66,7 +66,6 @@
 </svelte:head>
 
 <div class="w-full font-montserrat">
-	<Navbar />
 	<div class="heroSection flex">
 		<div
 			class="flex w-full flex-col items-center text-center"
