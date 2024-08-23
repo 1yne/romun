@@ -1,11 +1,9 @@
 <script>
 	import { page } from '$app/stores';
 	import ErrorLogo from '$lib/ErrorLogo.svelte';
-	import Navbar from '$lib/Navbar.svelte';
 	import { Button } from 'flowbite-svelte';
 </script>
 
-<Navbar />
 <div class="flex w-full flex-col items-center">
 	<ErrorLogo width={1000} />
 	<h1 class="mb-12 max-[645px]:mb-6 font-montserrat text-6xl font-bold uppercase text-white max-[645px]:text-4xl">
