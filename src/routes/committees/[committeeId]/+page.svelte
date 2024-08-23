@@ -10,7 +10,7 @@
 </script>
 
 <div class="font-montserrat px-12 flex gap-12 pt-12">
-  <div class="border-red border border-dotted p-8 committeeLogo" style:--logo="logo-UNSC">
+  <div class="p-8 committeeLogo" style:--logo="logo-{data.committeeData.name}">
     <svelte:component this={data.committeeData.logo} {...props}></svelte:component>
   </div>
   <h1 class="text-white text-6xl font-black">{data.committeeData.name}</h1>
