@@ -1,15 +1,12 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import UNSCLogo from '$lib/logos/UNSC.svelte';
-	import HRCLogo from '$lib/logos/HRC.svelte';
-	import UPILogo from '$lib/logos/UPI.svelte';
-	import AIPPMLogo from '$lib/logos/AIPPM.svelte';
 	import { io } from '@svelteuidev/composables';
 	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
+	import { committeeDataStore } from '$lib/stores/committeeDataStore';
 	import type { PageData } from './$types';
 	
 	export let data: PageData;
@@ -21,37 +18,6 @@
 		fill: 'D60202',
 		width: 150
 	};
-
-	const logos = [
-		{
-			logo: UNSCLogo,
-			name: 'UNSC'
-		},
-		{
-			logo: HRCLogo,
-			name: 'HRC'
-		},
-		{
-			logo: UPILogo,
-			name: 'UPI'
-		},
-		{
-			logo: UNSCLogo,
-			name: 'DISEC'
-		},
-		{
-			logo: UNSCLogo,
-			name: 'CCC'
-		},
-		{
-			logo: AIPPMLogo,
-			name: 'AIPPM'
-		},
-		{
-			logo: UNSCLogo,
-			name: 'UNODC'
-		}
-	];
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -111,15 +77,18 @@
 		<div
 			class="noScrollbar committees flex min-h-[28rem] w-full justify-between gap-2 overflow-x-scroll"
 		>
-			{#each logos as logo}
-				<div class="flex-col justify-center gap-6">
-					<div
-						class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
-					>
-						<svelte:component this={logo.logo} {...props}></svelte:component>
+			{#each $committeeDataStore as logo}
+				<a href={logo.link}>
+					<div class="flex-col justify-center gap-6">
+						<div
+							class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white committeeLogo"
+							style:--logo="logo-{logo.name}"
+						>
+							<svelte:component this={logo.logo} {...props}></svelte:component>
+						</div>
+						<h1 class="mt-4 text-xl font-bold text-white">{logo.name}</h1>
 					</div>
-					<h1 class="mt-4 text-xl font-bold text-white">{logo.name}</h1>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
@@ -229,5 +198,9 @@
 	.heroSection {
 		min-height: calc(100vh - 7rem);
 		padding-top: calc(50vh - 17rem);
+	}
+
+	.committeeLogo {
+		view-transition-name: var(--logo);
 	}
 </style>
