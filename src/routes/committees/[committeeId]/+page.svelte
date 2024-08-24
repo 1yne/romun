@@ -13,7 +13,10 @@
   <div class="p-8 committeeLogo" style:--logo="logo-{data.committeeData.name}">
     <svelte:component this={data.committeeData.logo} {...props}></svelte:component>
   </div>
-  <h1 class="text-white text-6xl font-black">{data.committeeData.name}</h1>
+  <div class="w-full">
+    <h1 class="text-white text-6xl font-black mb-2">{data.committeeData.name}</h1>
+    <h1 class="font-light text-3xl text-gray-500 italic">{data.committeeData.fullName}</h1>
+  </div>
 </div>
 
 <style>

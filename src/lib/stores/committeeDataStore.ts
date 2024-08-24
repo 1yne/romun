@@ -8,37 +8,44 @@ const data = [
   {
     logo: UNSCLogo,
     name: 'UNSC',
-    link: "/committees/unsc"
+    link: "/committees/unsc",
+    fullName: "United Nations Security Council"
   },
   {
     logo: HRCLogo,
     name: 'HRC',
-    link: "/committees/hrc"
+    link: "/committees/hrc",
+    fullName: "Human Rights Council"
   },
   {
     logo: UPILogo,
     name: 'UPI',
-    link: "/committees/upi"
+    link: "/committees/upi",
+    fullName: "United Press International"
   },
   {
     logo: UNSCLogo,
     name: 'DISEC',
-    link: "/committees/disec"
+    link: "/committees/disec",
+    fullName: "Disarmament and International Security Committee"
   },
   {
     logo: UNSCLogo,
     name: 'CCC',
-    link: "/committees/ccc"
+    link: "/committees/ccc",
+    fullName: "Continuous Crisis Committee"
   },
   {
     logo: AIPPMLogo,
     name: 'AIPPM',
-    link: "/committees/aippm"
+    link: "/committees/aippm",
+    fullName: "All India Political Party Meeting"
   },
   {
     logo: UNSCLogo,
     name: 'UNODC',
-    link: "/committees/unodc"
+    link: "/committees/unodc",
+    fullName: "United Nations Office on Drugs and Crime"
   }
 ]
 
