@@ -8,7 +8,7 @@
 	import { transitions } from '$lib/transitions';
 	import { committeeDataStore } from '$lib/stores/committeeDataStore';
 	import type { PageData } from './$types';
-	
+
 	export let data: PageData;
 
 	let visible: boolean;
@@ -81,10 +81,11 @@
 				<a href={logo.link}>
 					<div class="flex-col justify-center gap-6">
 						<div
-							class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white committeeLogo"
-							style:--logo="logo-{logo.name}"
+							class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
 						>
-							<svelte:component this={logo.logo} {...props}></svelte:component>
+							<div class="committeeLogo" style:--logo="logo-{logo.name}">
+								<svelte:component this={logo.logo} {...props}></svelte:component>
+							</div>
 						</div>
 						<h1 class="mt-4 text-xl font-bold text-white">{logo.name}</h1>
 					</div>
