@@ -122,7 +122,7 @@
 		</a>
 	</div>
 	<div class="flex justify-end bg-black px-12 pb-12">
-		<a href="https://github.com/1yne" target="_blank">
+		<a href="https://github.com/1yne/romun" target="_blank">
 			<LogoGithub class="text-white transition-all hover:text-red" size={24} />
 		</a>
 	</div>
