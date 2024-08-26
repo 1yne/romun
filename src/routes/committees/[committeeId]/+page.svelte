@@ -1,16 +1,20 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
-  const props = {
+  let windowWidth = 0
+
+  $: props = {
 		fill: 'D60202',
-		width: 500
+		width: windowWidth < 500 ? windowWidth - 96 : windowWidth < 800 ? 400 : 500
 	};
   
   export let data: PageData
 </script>
 
-<div class="font-montserrat px-12 flex gap-12 pt-12">
-  <div class="p-8 committeeLogo" style:--logo="logo-{data.name}">
+<svelte:window bind:outerWidth={windowWidth} />
+
+<div class="font-montserrat p-12 max-[645px]:p-8 flex gap-12 max-[645px]:flex-col max-[645px]:items-center">
+  <div class="committeeLogo" style:--logo="logo-{data.name}">
     <svelte:component this={data.logo} {...props}></svelte:component>
   </div>
   <div class="flex flex-col gap-2 w-full">
