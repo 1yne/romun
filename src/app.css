@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --red: #D60202;
-  --purple: #29235c;
-  --purpleHover: #1e1945;
-  --background: #0d0d0d
+	--red: #d60202;
+	--purple: #29235c;
+	--purpleHover: #1e1945;
+	--background: #0d0d0d;
 }

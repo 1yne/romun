@@ -5,16 +5,16 @@
 
 	onNavigate((navigation) => {
 		// @ts-expect-error
-		if (!document.startViewTransition) return
+		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
 			// @ts-expect-error
 			document.startViewTransition(async () => {
-				resolve()
-				await navigation.complete
-			})
-		})
-	})
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <div class="bg h-screen">

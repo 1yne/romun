@@ -1,14 +1,8 @@
 <script lang="ts">
-  export let width: number
+	export let width: number;
 </script>
 
-<svg
-	{width}
-	height={450}
-	viewBox={`0 0 1840 1380`}
-	fill="none"
-	xmlns="http://www.w3.org/2000/svg"
->
+<svg {width} height={450} viewBox={`0 0 1840 1380`} fill="none" xmlns="http://www.w3.org/2000/svg">
 	<g clip-path="url(#clip0_2698_3980)">
 		<path
 			d="M1201.5 711.919H641.86C625.523 711.919 612.354 698.657 612.354 682.426V332.064C612.354 315.734 625.622 302.57 641.86 302.57H1201.5C1217.83 302.57 1231 315.833 1231 332.064V682.426C1231 698.657 1217.74 711.919 1201.5 711.919Z"

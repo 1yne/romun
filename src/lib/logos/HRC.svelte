@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let width: number, fill: string
+	export let width: number, fill: string;
 </script>
 
 <svg
