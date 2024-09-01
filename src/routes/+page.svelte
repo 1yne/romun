@@ -53,19 +53,24 @@
 				>
 					October 2024
 				</h1>
+				<!-- <a href="/register" class="mt-24 max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-12 text-white" > -->
 				<a href="/register">
 					<button
-						class="button button--bestia max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
+						class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
 						in:fly={{ y: 20, delay: 200 }}
 					>
 						<div
-							class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+							class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
 						></div>
 						<span
 							class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
 							>REGISTER</span
 						>
 					</button>
+					<!-- <a
+						href="https://twitter.com/Dave_Conner"
+						class="btn alternateBtnStyle px-12 py-4">Register</a
+					> -->
 				</a>
 			{/if}
 		</div>
@@ -111,11 +116,11 @@
 	<div class="flex w-full justify-center bg-black py-12 pb-24">
 		<a href="/register">
 			<button
-				class="button button--bestia register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
 				in:fly={{ y: 20, delay: 200 }}
 			>
 				<div
-					class="button__bg absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
 				></div>
 				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 			</button>
@@ -138,22 +143,22 @@
 		height: 100%;
 	}
 
-	.button--bestia .button__bg {
+	.primaryBtnStyle .buttonBG {
 		transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 	}
 
-	.button--bestia:hover .button__bg {
+	.primaryBtnStyle:hover .buttonBG {
 		transform: scale3d(1.2, 1.2, 1);
 	}
 
-	.button--bestia .button__bg::before,
-	.button--bestia .button__bg::after {
+	.primaryBtnStyle .buttonBG::before,
+	.primaryBtnStyle .buttonBG::after {
 		content: '';
 		position: absolute;
 		background: var(--red);
 	}
 
-	.button--bestia .button__bg::before {
+	.primaryBtnStyle .buttonBG::before {
 		width: 110%;
 		height: 0;
 		padding-bottom: 110%;
@@ -163,12 +168,12 @@
 		transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
 	}
 
-	.button--bestia:hover .button__bg::before {
+	.primaryBtnStyle:hover .buttonBG::before {
 		transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 		transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
 	}
 
-	.button--bestia .button__bg::after {
+	.primaryBtnStyle .buttonBG::after {
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -177,7 +182,7 @@
 		transition: opacity 0.3s;
 	}
 
-	.button--bestia:hover .button__bg::after {
+	.primaryBtnStyle:hover .buttonBG::after {
 		opacity: 1;
 		transition-duration: 0.01s;
 		transition-delay: 0.3s;
@@ -203,5 +208,25 @@
 
 	.committeeLogo {
 		view-transition-name: var(--logo);
+	}
+
+	.alternateBtnStyle {
+		border: 0 solid;
+		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+		outline: 1px solid;
+		outline-color: rgba(255, 255, 255, 0.5);
+		outline-offset: 0px;
+		text-shadow: none;
+		transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	.alternateBtnStyle:hover {
+		border: 1px solid;
+		box-shadow:
+			inset 0 0 20px rgba(191, 6, 6, 0.5),
+			0 0 20px rgba(255, 255, 255, 0.2);
+		outline-color: rgba(255, 255, 255, 0);
+		outline-offset: 15px;
+		text-shadow: 1px 1px 2px #07a4e7;
 	}
 </style>
