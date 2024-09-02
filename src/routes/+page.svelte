@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { io } from '@svelteuidev/composables';
 	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -10,9 +9,6 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	let visible: boolean;
-	const handleChange = () => (visible = true);
 
 	const props = {
 		fill: 'D60202',
@@ -35,44 +31,39 @@
 
 <div class="w-full font-montserrat">
 	<div class="heroSection flex">
-		<div
-			class="flex w-full flex-col items-center text-center"
-			use:io={{ threshold: 1 }}
-			on:change={handleChange}
-		>
-			{#if visible}
+		<div class="flex w-full flex-col items-center text-center">
+			<div id="title">
 				<h1
 					class="font-montserrat font-extrabold text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
-					in:fly={{ y: 20 }}
 				>
 					RoMUN VIII
 				</h1>
+			</div>
+			<div id="date">
 				<h1
 					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
-					in:fly={{ y: 20, delay: 100 }}
 				>
 					October 2024
 				</h1>
-				<!-- <a href="/register" class="mt-24 max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-12 text-white" > -->
-				<a href="/register">
-					<button
-						class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
-						in:fly={{ y: 20, delay: 200 }}
+			</div>
+			<!-- <a href="/register" class="mt-24 max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-12 text-white" > -->
+			<a href="/register" id="register">
+				<button
+					class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
+				>
+					<div
+						class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+					></div>
+					<span
+						class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
+						>REGISTER</span
 					>
-						<div
-							class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-						></div>
-						<span
-							class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
-							>REGISTER</span
-						>
-					</button>
-					<!-- <a
+				</button>
+				<!-- <a
 						href="https://twitter.com/Dave_Conner"
 						class="btn alternateBtnStyle px-12 py-4">Register</a
 					> -->
-				</a>
-			{/if}
+			</a>
 		</div>
 	</div>
 	<div class="bg-black px-12">

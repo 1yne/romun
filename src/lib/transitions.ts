@@ -34,4 +34,11 @@ export function transitions() {
 		opacity: 0,
 		ease: 'power2'
 	});
+
+	gsap.from(["#title", "#date", "#register"], {
+		scrollTrigger: "#title",
+		y: 20,
+		stagger: 0.3,
+		opacity: 0
+	})
 }
