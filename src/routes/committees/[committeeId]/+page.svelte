@@ -28,13 +28,13 @@
 	muted
 	loop
 	id="myVideo"
-	class="fixed min-h-full max-[645px]:object-cover min-[845px]:object-fill"
+	class="fixed min-h-full object-cover"
 >
 	<source src={data.video} type="video/mp4" />
 	Your browser does not support HTML5 video.
 </video>
 
-<div class="fixed min-h-full min-w-full bg-black/70">
+<div class="fixed min-h-full min-w-full bg-black/75">
 	<Navbar />
 	<div
 		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div id="committeeDescription">
-				<p class="mt-4 text-white w-1/2">{data.description}</p>
+				<p class="mt-4 text-white w-1/2 max-[645px]:w-auto">{data.description}</p>
 			</div>
 		</div>
 	</div>
