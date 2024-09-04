@@ -23,7 +23,13 @@
 
 <svelte:window bind:outerWidth={windowWidth} />
 
-<video autoplay muted loop id="myVideo" class="fixed min-h-full min-[845px]:object-fill max-[645px]:object-cover">
+<video
+	autoplay
+	muted
+	loop
+	id="myVideo"
+	class="fixed min-h-full max-[645px]:object-cover min-[845px]:object-fill"
+>
 	<source src={data.video} type="video/mp4" />
 	Your browser does not support HTML5 video.
 </video>

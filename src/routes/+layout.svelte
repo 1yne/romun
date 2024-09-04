@@ -21,7 +21,7 @@
 </script>
 
 <div class={`${classname} h-screen`}>
-	{#if !$page.route.id?.includes("/committees")}
+	{#if !$page.route.id?.includes('/committees')}
 		<Navbar />
 	{/if}
 	<slot></slot>
