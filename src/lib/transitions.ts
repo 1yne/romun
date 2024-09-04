@@ -41,4 +41,11 @@ export function transitions() {
 		stagger: 0.3,
 		opacity: 0
 	})
+	gsap.from(["#committeeTitle", "#committeeName", "#committeeAgenda"], {
+		scrollTrigger: "#committeeTitle",
+		x: -20,
+		stagger: 0.3,
+		opacity: 0,
+		delay: 0.5
+	})
 }

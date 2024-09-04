@@ -1,5 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { onMount } from 'svelte';
+	import { transitions } from '$lib/transitions';
+	import Navbar from '$lib/Navbar.svelte';
 
 	let windowWidth = 0;
 
@@ -9,25 +14,38 @@
 	};
 
 	export let data: PageData;
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		transitions();
+	});
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
 
-<div
-	class="flex gap-12 p-12 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
->
-	<div class="committeeLogo" style:--logo="logo-{data.name}">
-		<svelte:component this={data.logo} {...props}></svelte:component>
-	</div>
-	<div class="flex w-full flex-col gap-2">
-		<h1 class="text-6xl font-black text-white">{data.name}</h1>
-		<h1 class="text-3xl font-light italic text-gray-500">{data.fullName}</h1>
-		<div
-			class="my-2 rounded-md border border-white/50 bg-black/50 p-4 text-white transition-all hover:border-white hover:bg-black"
-		>
-			<h2>Agenda: {data.agenda}</h2>
+<video autoplay muted loop id="myVideo" class="fixed min-h-full min-[845px]:object-fill max-[645px]:object-cover">
+	<source src={data.video} type="video/mp4" />
+	Your browser does not support HTML5 video.
+</video>
+
+<div class="fixed min-h-full min-w-full bg-black/70">
+	<Navbar />
+	<div
+		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
+	>
+		<div>
+			<div id="committeeTitle">
+				<h1 class="text-8xl font-black text-white">{data.name}</h1>
+			</div>
+			<div id="committeeName">
+				<h1 class="mt-2 text-2xl font-light italic text-gray-500">{data.fullName}</h1>
+			</div>
+			<div id="committeeAgenda">
+				<div>
+					<h1 class="mt-2 text-2xl font-bold text-white">Agenda: {data.agenda}</h1>
+				</div>
+			</div>
 		</div>
-		<p class="text-lg text-white">{data.description}</p>
 	</div>
 </div>
 
