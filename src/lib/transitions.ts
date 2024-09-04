@@ -48,4 +48,8 @@ export function transitions() {
 		opacity: 0,
 		delay: 0.5
 	});
+	gsap.from("#myVideo", {
+		opacity: 0,
+		duration: 1
+	})
 }
