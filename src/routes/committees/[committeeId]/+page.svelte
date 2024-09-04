@@ -48,8 +48,11 @@
 			</div>
 			<div id="committeeAgenda">
 				<div>
-					<h1 class="mt-2 text-2xl font-bold text-white">Agenda: {data.agenda}</h1>
+					<h1 class="mt-3 text-2xl font-bold text-white">Agenda: {data.agenda}</h1>
 				</div>
+			</div>
+			<div id="committeeDescription">
+				<p class="mt-4 text-white w-1/2">{data.description}</p>
 			</div>
 		</div>
 	</div>
