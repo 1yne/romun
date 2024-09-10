@@ -37,11 +37,11 @@
 <div class="fixed min-h-full min-w-full bg-black/75">
 	<Navbar />
 	<div
-		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
+		class="flex min-h-full min-w-full gap-12 px-12 py-4 max-[645px]:pb-12 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
 	>
 		<div>
 			<div id="committeeTitle">
-				<h1 class="text-8xl font-black text-white">{data.name}</h1>
+				<h1 class="text-8xl max-[645px]:text-6xl font-black text-white">{data.name}</h1>
 			</div>
 			<div id="committeeName">
 				<h1 class="mt-2 text-2xl font-light italic text-gray-500">{data.fullName}</h1>
