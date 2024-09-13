@@ -1,9 +1,5 @@
 # RoMUN 2024
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## About
-
 The Model United Nations (MUN) competition at Royale Concorde International School is set to
 be an exhilarating and intellectually stimulating event, drawing students from various schools
 to engage in dynamic diplomatic simulations. The conference will feature a range of
