@@ -23,13 +23,7 @@
 
 <svelte:window bind:outerWidth={windowWidth} />
 
-<video
-	autoplay
-	muted
-	loop
-	id="myVideo"
-	class="fixed min-h-full object-cover"
->
+<video autoplay muted loop id="myVideo" class="fixed min-h-full object-cover">
 	<source src={data.video} type="video/mp4" />
 	Your browser does not support HTML5 video.
 </video>
@@ -37,11 +31,11 @@
 <div class="fixed min-h-full min-w-full bg-black/75">
 	<Navbar />
 	<div
-		class="flex min-h-full min-w-full gap-12 px-12 py-4 max-[645px]:pb-12 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8"
+		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8 max-[645px]:pb-12"
 	>
 		<div>
 			<div id="committeeTitle">
-				<h1 class="text-8xl max-[645px]:text-6xl font-black text-white">{data.name}</h1>
+				<h1 class="text-9xl font-black text-white max-[645px]:text-6xl">{data.name}</h1>
 			</div>
 			<div id="committeeName">
 				<h1 class="mt-2 text-2xl font-light italic text-gray-500">{data.fullName}</h1>
@@ -52,7 +46,15 @@
 				</div>
 			</div>
 			<div id="committeeDescription">
-				<p class="mt-4 text-white w-1/2 max-[645px]:w-auto">{data.description}</p>
+				<p class="mt-4 w-1/2 text-white max-[645px]:w-auto">{data.description}</p>
+			</div>
+			<div id="committeeRegister" class="mt-12">
+				<a
+					href="/register"
+					class="mt-24 text-white max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-12"
+				>
+					<span class="btn registerBtn border-0 border-solid px-12 py-4">Register</span>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -61,5 +63,24 @@
 <style>
 	.committeeLogo {
 		view-transition-name: var(--logo);
+	}
+
+	.registerBtn {
+		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+		outline: 1px solid;
+		outline-color: rgba(255, 255, 255, 0.5);
+		outline-offset: 0px;
+		text-shadow: none;
+		transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	}
+
+	.registerBtn:hover {
+		border: 1px solid;
+		box-shadow:
+			inset 0 0 20px rgba(191, 6, 6, 0.5),
+			0 0 20px rgba(255, 255, 255, 0.2);
+		outline-color: rgba(255, 255, 255, 0);
+		outline-offset: 15px;
+		text-shadow: 1px 1px 2px #07a4e7;
 	}
 </style>
