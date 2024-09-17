@@ -6,7 +6,7 @@
 	</h1>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-missing-attribute -->
-	<a on:click={() => history.back()} class="rounded-md bg-purple p-4 px-8 text-white transition-all hover:bg-purpleHover"
+	<a on:click={() => history.back()} class="rounded-md bg-purple p-4 px-8 text-white transition-all hover:bg-purpleHover cursor-pointer"
 		>Back</a
 	>
 </div>
