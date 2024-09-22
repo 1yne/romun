@@ -15,6 +15,7 @@ export default {
 				purple: 'var(--purple)',
 				purpleHover: 'var(--purpleHover)',
 				background: 'var(--background)',
+				blue: 'var(--blue)',
 				primary: {
 					50: '#FFF5F2',
 					100: '#FFF1EE',

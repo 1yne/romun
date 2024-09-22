@@ -29,19 +29,19 @@
 	/>
 </svelte:head>
 
-<div class="w-full font-montserrat">
+<div class="w-full font-montserrat pt-24">
 	<div class="heroSection flex">
 		<div class="flex w-full flex-col items-center text-center">
 			<div id="title">
 				<h1
-					class="font-montserrat font-extrabold text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
+					class="font-montserrat font-extrabold text-black transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
 				>
 					RoMUN VIII
 				</h1>
 			</div>
 			<div id="date">
 				<h1
-					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
+					class="font-montserrat font-semibold text-black transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
 				>
 					October 2024
 				</h1>
@@ -61,7 +61,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="bg-black px-12">
+	<div class="bg-purple p-12">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
@@ -72,7 +72,7 @@
 				<a href={logo.link}>
 					<div class="flex-col justify-center gap-6">
 						<div
-							class="flex min-h-96 items-center justify-center border border-solid border-white/15 p-4 transition-all hover:border-white"
+							class="flex min-h-96 items-center justify-center border border-solid border-black/25 rounded-md p-4 transition-all hover:border-white  bg-black/25"
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
 								<svelte:component this={logo.logo} {...props}></svelte:component>
@@ -84,11 +84,11 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bg-black px-12 py-8 pt-24">
-		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
+	<div class="bg-blue p-12">
+		<h1 class="aboutHeading mb-6 text-3xl font-bold text-black" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
-		<p class="about text-lg text-white" in:fade>
+		<p class="about text-lg text-black" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
@@ -99,23 +99,23 @@
 			international awareness.
 		</p>
 	</div>
-	<div class="flex w-full justify-center bg-black py-12 pb-24">
+	<div class="flex flex-col w-full items-center bg-blue py-12 gap-24 footer bg-no-repeat bg-cover bg-[url('/BG4.png')]">
 		<a href="/register">
 			<button
-				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-xl text-white"
+				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-xl text-black hover:text-white transition-all"
 				in:fly={{ y: 20, delay: 200 }}
 			>
 				<div
-					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-blue"
 				></div>
 				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 			</button>
 		</a>
-	</div>
-	<div class="flex justify-end bg-black px-12 pb-12">
-		<a href="https://github.com/1yne/romun" target="_blank">
-			<LogoGithub class="text-white transition-all hover:text-red" size={24} />
-		</a>
+		<div class="flex justify-end w-full px-12">
+			<a href="https://github.com/1yne/romun" target="_blank">
+				<LogoGithub class="text-white transition-all hover:text-red" size={24} />
+			</a>
+		</div>
 	</div>
 </div>
 
