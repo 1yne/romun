@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-purple p-12">
+	<div class="p-12 committeeWrapper">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
@@ -214,5 +214,9 @@
 
 	.divShadow {
 		box-shadow: 0 20px 80px 0 rgba(255, 255, 255, 0.3);
+	}
+
+	.committeeWrapper {
+		background-color: rgba(41, 35, 92, 0.5);
 	}
 </style>
