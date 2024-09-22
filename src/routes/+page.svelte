@@ -29,19 +29,19 @@
 	/>
 </svelte:head>
 
-<div class="w-full font-montserrat pt-24">
+<div class="w-full font-playfair pt-24">
 	<div class="heroSection flex">
 		<div class="flex w-full flex-col items-center text-center">
 			<div id="title">
 				<h1
-					class="font-montserrat font-extrabold text-black transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
+					class="font-montserrat font-black text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
 				>
 					RoMUN VIII
 				</h1>
 			</div>
 			<div id="date">
 				<h1
-					class="font-montserrat font-semibold text-black transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
+					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
 				>
 					October 2024
 				</h1>
@@ -61,6 +61,21 @@
 			</a>
 		</div>
 	</div>
+	<div class="letter p-12 bg-background">
+		<div class="bg-white flex h-[40rem] divShadow">
+			<div class="w-1/2 p-8">
+				<h1 class="text-5xl mb-8">Letter from the Secretary-General</h1>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit consectetur doloremque eius laborum officiis aut asperiores, esse voluptates.
+				Aliquam eum totam fugiat adipisci modi, fuga maiores magnam commodi, accusamus optio expedita dolorum! Reprehenderit, vel. Iure excepturi, nobis harum, sunt architecto numquam quas alias consectetur doloremque ullam, non omnis!
+				Dolorem natus rem explicabo esse. Hic consequuntur possimus deserunt velit molestias maiores quia fugiat cupiditate? Quibusdam, mollitia velit corporis dolor itaque impedit excepturi totam nemo architecto atque et cum molestias.
+				Porro ex provident suscipit nostrum autem sed dolorum, eveniet deserunt. At labore sunt facere. Corporis, suscipit. Culpa incidunt optio, dicta quos sit dolorem, voluptates explicabo labore omnis adipisci, odio laborum!
+				Tempora laboriosam blanditiis ipsam quidem accusantium dolores ex natus fugiat perferendis voluptates quo obcaecati nihil, provident id quam vitae sequi porro hic aliquam totam. Facilis porro facere cum sunt assumenda.</p>
+			</div>
+			<div class="w-1/2 flex justify-end">
+				<img src="/LetterFromSG.jpg" alt="" class="h-[40rem] object-cover w-full">
+			</div>
+		</div>
+	</div>
 	<div class="bg-purple p-12">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
@@ -72,7 +87,7 @@
 				<a href={logo.link}>
 					<div class="flex-col justify-center gap-6">
 						<div
-							class="flex min-h-96 items-center justify-center border border-solid border-black/25 rounded-md p-4 transition-all hover:border-white  bg-black/25"
+							class="flex min-h-96 items-center justify-center border border-solid border-white/25 rounded-md p-4 transition-all hover:border-white  bg-black/25"
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
 								<svelte:component this={logo.logo} {...props}></svelte:component>
@@ -99,19 +114,20 @@
 			international awareness.
 		</p>
 	</div>
-	<div class="flex flex-col w-full items-center bg-blue py-12 gap-24 footer bg-no-repeat bg-cover bg-[url('/BG4.png')]">
+	<div class="flex flex-col w-full items-center bg-blue py-12 gap-24 footer bg-no-repeat bg-cover bg-[url('/BG8.png')]">
 		<a href="/register">
 			<button
-				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-xl text-black hover:text-white transition-all"
+				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-playfair text-white  transition-all"
 				in:fly={{ y: 20, delay: 200 }}
 			>
 				<div
-					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-blue"
+					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
 				></div>
 				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 			</button>
 		</a>
-		<div class="flex justify-end w-full px-12">
+		<div class="flex justify-between w-full px-12">
+			<h1 class="text-white">Made by Tanmay Nambiar</h1>
 			<a href="https://github.com/1yne/romun" target="_blank">
 				<LogoGithub class="text-white transition-all hover:text-red" size={24} />
 			</a>
@@ -188,11 +204,15 @@
 	}
 
 	.heroSection {
-		min-height: calc(100vh - 7rem);
+		min-height: calc(100vh - 6rem);
 		padding-top: calc(50vh - 17rem);
 	}
 
 	.committeeLogo {
 		view-transition-name: var(--logo);
+	}
+
+	.divShadow {
+		box-shadow: 0 20px 80px 0 rgba(255, 255, 255, 0.3);
 	}
 </style>
