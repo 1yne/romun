@@ -61,9 +61,10 @@
 			</a>
 		</div>
 	</div>
-	<div class="letter p-12 bg-background">
-		<div class="bg-white flex h-[40rem] divShadow">
-			<div class="w-1/2 p-8">
+	<div class="letter p-12 bg-background max-[645px]:p-6">
+		<div class="bg-white flex min-h-[40rem] divShadow max-[645px]:flex-col">
+			<img src="/LetterFromSG.jpg" alt="" class="w-1/2 h-fit object-cover">
+			<div class="p-8 max-[645px]:px-6">
 				<h1 class="text-5xl mb-8">Letter from the Secretary-General</h1>
 				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit consectetur doloremque eius laborum officiis aut asperiores, esse voluptates.
 				Aliquam eum totam fugiat adipisci modi, fuga maiores magnam commodi, accusamus optio expedita dolorum! Reprehenderit, vel. Iure excepturi, nobis harum, sunt architecto numquam quas alias consectetur doloremque ullam, non omnis!
@@ -71,12 +72,9 @@
 				Porro ex provident suscipit nostrum autem sed dolorum, eveniet deserunt. At labore sunt facere. Corporis, suscipit. Culpa incidunt optio, dicta quos sit dolorem, voluptates explicabo labore omnis adipisci, odio laborum!
 				Tempora laboriosam blanditiis ipsam quidem accusantium dolores ex natus fugiat perferendis voluptates quo obcaecati nihil, provident id quam vitae sequi porro hic aliquam totam. Facilis porro facere cum sunt assumenda.</p>
 			</div>
-			<div class="w-1/2 flex justify-end">
-				<img src="/LetterFromSG.jpg" alt="" class="h-[40rem] object-cover w-full">
-			</div>
 		</div>
 	</div>
-	<div class="p-12 committeeWrapper">
+	<div class="p-12 committeeWrapper max-[645px]:p-6">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
@@ -99,7 +97,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bg-blue p-12">
+	<div class="bg-blue p-12 max-[645px]:p-6">
 		<h1 class="aboutHeading mb-6 text-3xl font-bold text-black" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
