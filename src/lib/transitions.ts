@@ -50,6 +50,6 @@ export function transitions() {
 	});
 	gsap.from("#myVideo", {
 		opacity: 0,
-		duration: 2
+		duration: 0.5
 	})
 }
