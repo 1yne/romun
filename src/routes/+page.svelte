@@ -4,8 +4,13 @@
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import { committeeDataStore } from '$lib/stores/committeeDataStore';
+	import type { PageData } from './$types';
 
-	onMount(() => transitions())
+	export let data: PageData;
+
+	onMount(() => {
+		if (!data.isDataRequest) transitions();
+	});
 
 	const props = {
 		fill: 'D60202',
