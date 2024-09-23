@@ -28,7 +28,7 @@
 	Your browser does not support HTML5 video.
 </video>
 
-<div class="fixed min-h-full min-w-full bg-black/75 pt-24">
+<div class="fixed min-h-full min-w-full bg-black/75 pt-12">
 	<Navbar />
 	<div
 		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8 max-[645px]:pb-12"
