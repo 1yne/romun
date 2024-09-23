@@ -1,5 +1,5 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="p-12">
+<div class="p-12 pt-20">
 	<h1 class="mb-8 text-white">
 		This is just a page made for testing navigation. This page will be deleted in the official
 		website, and the "Register" button will lead to a link
