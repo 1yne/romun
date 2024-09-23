@@ -29,7 +29,7 @@
 	/>
 </svelte:head>
 
-<div class="w-full font-playfair pt-24">
+<div class="w-full pt-24 font-playfair">
 	<div class="heroSection flex">
 		<div class="flex w-full flex-col items-center text-center">
 			<div id="title">
@@ -61,20 +61,33 @@
 			</a>
 		</div>
 	</div>
-	<div class="letter p-12 bg-background max-[645px]:p-6">
-		<div class="bg-white flex min-h-[40rem] divShadow max-[645px]:flex-col">
-			<img src="/LetterFromSG.jpg" alt="" class="w-1/2 h-fit object-cover">
-			<div class="p-8 max-[645px]:px-6">
-				<h1 class="text-5xl mb-8">Letter from the Secretary-General</h1>
-				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit consectetur doloremque eius laborum officiis aut asperiores, esse voluptates.
-				Aliquam eum totam fugiat adipisci modi, fuga maiores magnam commodi, accusamus optio expedita dolorum! Reprehenderit, vel. Iure excepturi, nobis harum, sunt architecto numquam quas alias consectetur doloremque ullam, non omnis!
-				Dolorem natus rem explicabo esse. Hic consequuntur possimus deserunt velit molestias maiores quia fugiat cupiditate? Quibusdam, mollitia velit corporis dolor itaque impedit excepturi totam nemo architecto atque et cum molestias.
-				Porro ex provident suscipit nostrum autem sed dolorum, eveniet deserunt. At labore sunt facere. Corporis, suscipit. Culpa incidunt optio, dicta quos sit dolorem, voluptates explicabo labore omnis adipisci, odio laborum!
-				Tempora laboriosam blanditiis ipsam quidem accusantium dolores ex natus fugiat perferendis voluptates quo obcaecati nihil, provident id quam vitae sequi porro hic aliquam totam. Facilis porro facere cum sunt assumenda.</p>
+	<div class="letter bg-background p-12 max-[645px]:p-6">
+		<div class="divShadow flex min-h-[40rem] bg-white max-[645px]:flex-col">
+			<div
+				class="flex w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 min-h-96 max-[645px]:w-full"
+			></div>
+			<div class="w-1/2 p-8 max-[645px]:px-6 max-[645px]:w-full">
+				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti
+					facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit
+					consectetur doloremque eius laborum officiis aut asperiores, esse voluptates. Aliquam eum
+					totam fugiat adipisci modi, fuga maiores magnam commodi, accusamus optio expedita dolorum!
+					Reprehenderit, vel. Iure excepturi, nobis harum, sunt architecto numquam quas alias
+					consectetur doloremque ullam, non omnis! Dolorem natus rem explicabo esse. Hic
+					consequuntur possimus deserunt velit molestias maiores quia fugiat cupiditate? Quibusdam,
+					mollitia velit corporis dolor itaque impedit excepturi totam nemo architecto atque et cum
+					molestias. Porro ex provident suscipit nostrum autem sed dolorum, eveniet deserunt. At
+					labore sunt facere. Corporis, suscipit. Culpa incidunt optio, dicta quos sit dolorem,
+					voluptates explicabo labore omnis adipisci, odio laborum! Tempora laboriosam blanditiis
+					ipsam quidem accusantium dolores ex natus fugiat perferendis voluptates quo obcaecati
+					nihil, provident id quam vitae sequi porro hic aliquam totam. Facilis porro facere cum
+					sunt assumenda.
+				</p>
 			</div>
 		</div>
 	</div>
-	<div class="p-12 committeeWrapper max-[645px]:p-6">
+	<div class="committeeWrapper p-12 max-[645px]:p-6">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
@@ -85,7 +98,7 @@
 				<a href={logo.link}>
 					<div class="flex-col justify-center gap-6">
 						<div
-							class="flex min-h-96 items-center justify-center border border-solid border-white/25 rounded-md p-4 transition-all hover:border-white  bg-black/25"
+							class="flex min-h-96 items-center justify-center rounded-md border border-solid border-white/25 bg-black/25 p-4 transition-all hover:border-white"
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
 								<svelte:component this={logo.logo} {...props}></svelte:component>
@@ -97,11 +110,11 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bg-blue p-12 max-[645px]:p-6">
-		<h1 class="aboutHeading mb-6 text-3xl font-bold text-black" in:fly||global={{ x: -50 }}>
+	<div class="aboutWrapper bg-blue p-12 max-[645px]:p-6">
+		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
-		<p class="about text-lg text-black" in:fade>
+		<p class="about text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
@@ -112,10 +125,12 @@
 			international awareness.
 		</p>
 	</div>
-	<div class="flex flex-col w-full items-center bg-blue py-12 gap-24 footer bg-no-repeat bg-cover bg-[url('/BG8.png')]">
+	<div
+		class="footer flex w-full flex-col items-center gap-24 bg-blue bg-[url('/BG8.png')] bg-cover bg-no-repeat py-12"
+	>
 		<a href="/register">
 			<button
-				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white  transition-all"
+				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all"
 				in:fly={{ y: 20, delay: 200 }}
 			>
 				<div
@@ -124,7 +139,7 @@
 				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 			</button>
 		</a>
-		<div class="flex justify-between w-full px-12">
+		<div class="flex w-full justify-between px-12">
 			<h1 class="text-white">Made by Tanmay Nambiar</h1>
 			<a href="https://github.com/1yne/romun" target="_blank">
 				<LogoGithub class="text-white transition-all hover:text-red" size={24} />
@@ -216,5 +231,9 @@
 
 	.committeeWrapper {
 		background-color: rgba(41, 35, 92, 0.5);
+	}
+
+	.aboutWrapper {
+		background-color: rgba(214, 2, 2, 0.2);
 	}
 </style>
