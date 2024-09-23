@@ -21,9 +21,7 @@
 </script>
 
 <div class={`${classname} h-screen`}>
-	{#if !$page.route.id?.includes('/committees')}
-		<Navbar />
-	{/if}
+	<Navbar />
 	<slot></slot>
 </div>
 
@@ -37,9 +35,9 @@
 	}
 
 	.heroBG {
-		background-color: black;
-		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
-			repeating-radial-gradient(circle at 0 0, transparent 0, black 150px),
-			repeating-linear-gradient(var(--purple), var(--red));
+		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(13, 13, 13, 1)), url('/BG7.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 </style>

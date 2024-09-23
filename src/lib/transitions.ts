@@ -1,6 +1,14 @@
 import gsap from 'gsap';
 
 export function transitions() {
+	gsap.from('.letter', {
+		scrollTrigger: '.letter',
+		y: 100,
+		duration: 1.4,
+		opacity: 0,
+		ease: 'power2',
+		start: '300px'
+	});
 	gsap.from('.committees', {
 		scrollTrigger: '.committees',
 		x: -400,
@@ -50,6 +58,6 @@ export function transitions() {
 	});
 	gsap.from("#myVideo", {
 		opacity: 0,
-		duration: 2
+		duration: 0.5
 	})
 }
