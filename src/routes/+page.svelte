@@ -1,24 +1,16 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import { committeeDataStore } from '$lib/stores/committeeDataStore';
-	import type { PageData } from './$types';
 
-	export let data: PageData;
+	onMount(() => transitions())
 
 	const props = {
 		fill: 'D60202',
 		width: 150
 	};
-
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-		if (!data.isDataRequest) transitions();
-	});
 </script>
 
 <svelte:head>
@@ -219,10 +211,6 @@
 	.heroSection {
 		min-height: calc(100vh - 6rem);
 		padding-top: calc(50vh - 17rem);
-	}
-
-	.committeeLogo {
-		view-transition-name: var(--logo);
 	}
 
 	.divShadow {

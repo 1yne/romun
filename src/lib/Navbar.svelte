@@ -27,9 +27,3 @@
 		{/if}
 	</a>
 </div>
-
-<style>
-	.navbar {
-		view-transition-name: navbar;
-	}
-</style>

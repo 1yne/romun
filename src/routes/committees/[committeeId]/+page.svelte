@@ -1,24 +1,14 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
-	import Navbar from '$lib/Navbar.svelte';
+
+	onMount(() => transitions())
 
 	let windowWidth = 0;
 
-	$: props = {
-		fill: 'D60202',
-		width: windowWidth < 500 ? windowWidth - 96 : windowWidth < 800 ? 400 : 500
-	};
-
 	export let data: PageData;
 
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-		transitions();
-	});
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
@@ -29,7 +19,6 @@
 </video>
 
 <div class="fixed min-h-full min-w-full bg-black/75 pt-16">
-	<Navbar />
 	<div
 		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat max-[645px]:flex-col max-[645px]:items-center max-[645px]:p-8 max-[645px]:pb-12"
 	>
@@ -61,10 +50,6 @@
 </div>
 
 <style>
-	.committeeLogo {
-		view-transition-name: var(--logo);
-	}
-
 	.registerBtn {
 		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
 		outline: 1px solid;

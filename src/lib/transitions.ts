@@ -1,5 +1,3 @@
-import gsap from 'gsap';
-
 export function transitions() {
 	gsap.from('.letter', {
 		scrollTrigger: '.letter',
@@ -58,7 +56,6 @@ export function transitions() {
 			'#committeeRegister'
 		],
 		{
-			scrollTrigger: '#committeeTitle',
 			x: -20,
 			stagger: 0.3,
 			opacity: 0,
