@@ -115,7 +115,7 @@
 	<div class="flex flex-col w-full items-center bg-blue py-12 gap-24 footer bg-no-repeat bg-cover bg-[url('/BG8.png')]">
 		<a href="/register">
 			<button
-				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-playfair text-white  transition-all"
+				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white  transition-all"
 				in:fly={{ y: 20, delay: 200 }}
 			>
 				<div
