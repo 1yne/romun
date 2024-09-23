@@ -36,14 +36,14 @@
 				<h1
 					class="font-montserrat font-black text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
 				>
-					RoMUN VIII
+					RoMUN 2024
 				</h1>
 			</div>
 			<div id="date">
 				<h1
 					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
 				>
-					October 2024
+					Welcome to the 8th edition
 				</h1>
 			</div>
 			<a href="/register" id="register">
