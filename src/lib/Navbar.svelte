@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="navbar fixed top-0 z-[1000] flex h-24 w-full p-4 px-8 text-white transition-all max-[645px]:px-6"
+	class="navbar fixed top-0 z-[1000] flex h-24 w-full p-6 px-12 text-white transition-all max-[645px]:px-6"
 >
 	<a href="/">
 		{#if $page.route.id === '/'}
