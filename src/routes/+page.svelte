@@ -136,8 +136,7 @@
 				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 			</button>
 		</a>
-		<div class="flex w-full justify-between px-12">
-			<h1 class="text-white">Made by Tanmay Nambiar</h1>
+		<div class="flex w-full justify-end px-12">
 			<a href="https://github.com/1yne/romun" target="_blank">
 				<LogoGithub class="text-white transition-all hover:text-red" size={24} />
 			</a>

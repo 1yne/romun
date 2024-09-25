@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="navbar fixed top-0 z-[1000] flex h-24 w-full p-6 px-12 text-white transition-all max-[645px]:px-6"
+	class="navbar fixed top-0 z-[1000] flex h-24 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
 >
 	<a href="/">
 		{#if $page.route.id === '/'}
@@ -27,3 +27,20 @@
 		{/if}
 	</a>
 </div>
+
+<style>
+	@supports (animation-timeline: view()) {
+		@keyframes shadow-in {
+			to {
+				box-shadow: 0 10px 10px #0003;
+				background-color: var(--background);
+			}
+		}
+
+		.navbar {
+			animation: shadow-in auto linear both;
+			animation-timeline: scroll();
+			animation-range: 0% 50%;
+		}
+	}
+</style>
