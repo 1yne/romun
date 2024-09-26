@@ -7,7 +7,9 @@
 <div
 	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
 >
-	<div class="navbar w-full rounded-lg flex items-center px-6 gap-4 py-1">
+	<div
+		class={`navbar flex w-full items-center gap-4 rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
+	>
 		<a href="/">
 			{#if $page.route.id === '/'}
 				<img
@@ -27,7 +29,15 @@
 				</div>
 			{/if}
 		</a>
-		<h1 class="text-white text-3xl font-black heading opacity-0">RoMUN 2024</h1>
+		{#if $page.route.id === '/'}
+			<h1
+				class="heading text-2xl font-black text-white"
+				in:fly|global={{ y: -10, duration: 500, delay: 700 }}
+				out:fly|global={{ y: -10, duration: 500 }}
+			>
+				RoMUN 2024
+			</h1>
+		{/if}
 	</div>
 </div>
 
@@ -42,10 +52,10 @@
 		}
 		@keyframes fade-text-in {
 			from {
-				opacity: 0
+				opacity: 0;
 			}
 			to {
-				opacity: 1
+				opacity: 1;
 			}
 		}
 
