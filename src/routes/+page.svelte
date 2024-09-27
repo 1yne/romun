@@ -40,7 +40,7 @@
 				<h1
 					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
 				>
-					Welcome to the 8th edition
+					October 24th-25th
 				</h1>
 			</div>
 			<a href="/register" id="register">
@@ -65,7 +65,7 @@
 			></div>
 			<div class="w-1/2 p-8 max-[645px]:w-full max-[645px]:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
-				<p>
+				<p class="font-montserrat">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti
 					facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit
 					consectetur doloremque eius laborum officiis aut asperiores, esse voluptates. Aliquam eum
@@ -101,7 +101,7 @@
 								<svelte:component this={logo.logo} {...props}></svelte:component>
 							</div>
 						</div>
-						<h1 class="mt-4 text-xl font-bold text-white">{logo.name}</h1>
+						<h1 class="mt-4 text-xl font-bold text-white font-montserrat">{logo.name}</h1>
 					</div>
 				</a>
 			{/each}
@@ -111,7 +111,7 @@
 		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
-		<p class="about text-lg text-white" in:fade>
+		<p class="about text-lg text-white font-montserrat" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
