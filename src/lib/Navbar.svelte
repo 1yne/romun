@@ -17,11 +17,11 @@
 					alt="RCIS Logo"
 					class="w-16"
 					in:fly|global={{ y: -10, duration: 500, delay: 700 }}
-					out:fly|global={{ y: -10, duration: 500, delay: 200 }}
+					out:fly|global={{ y: -10, duration: 500 }}
 				/>
 				<h1
 					class="heading text-2xl font-black text-white"
-					in:fly|global={{ y: -10, duration: 500, delay: 900 }}
+					in:fly|global={{ y: -10, duration: 500, delay: 700 }}
 					out:fly|global={{ y: -10, duration: 500 }}
 				>
 					RoMUN 2024
