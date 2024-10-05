@@ -43,19 +43,17 @@
 					October 24th-25th
 				</h1>
 			</div>
-			<a href="/register" id="register">
-				<button
-					class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
+			<button
+				class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
+			>
+				<div
+					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+				></div>
+				<span
+					class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
+					>REGISTER</span
 				>
-					<div
-						class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-					></div>
-					<span
-						class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
-						>REGISTER</span
-					>
-				</button>
-			</a>
+			</button>
 		</div>
 	</div>
 	<div class="letter bg-background p-12 max-[645px]:p-6">
@@ -101,7 +99,7 @@
 								<svelte:component this={logo.logo} {...props}></svelte:component>
 							</div>
 						</div>
-						<h1 class="mt-4 text-xl font-bold text-white font-montserrat">{logo.name}</h1>
+						<h1 class="mt-4 font-montserrat text-xl font-bold text-white">{logo.name}</h1>
 					</div>
 				</a>
 			{/each}
@@ -111,7 +109,7 @@
 		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
-		<p class="about text-lg text-white font-montserrat" in:fade>
+		<p class="about font-montserrat text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
@@ -125,17 +123,15 @@
 	<div
 		class="footer flex w-full flex-col items-center gap-24 bg-blue bg-[url('/BG8.png')] bg-cover bg-no-repeat py-12"
 	>
-		<a href="/register">
-			<button
-				class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all"
-				in:fly={{ y: 20, delay: 200 }}
-			>
-				<div
-					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
-				></div>
-				<span class="relative block px-12 py-6 text-sm">REGISTER</span>
-			</button>
-		</a>
+		<button
+			class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all"
+			in:fly={{ y: 20, delay: 200 }}
+		>
+			<div
+				class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+			></div>
+			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
+		</button>
 		<div class="flex w-full justify-end px-12">
 			<a href="https://github.com/1yne/romun" target="_blank">
 				<LogoGithub class="text-white transition-all hover:text-red" size={24} />
