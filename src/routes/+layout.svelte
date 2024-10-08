@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import Navbar from '$lib/Navbar.svelte';
+	import Footer from '$lib/Footer.svelte';
 	import { page } from '$app/stores';
 
 	$: classname = $page.route.id?.includes('committees') ? 'committeeBG' : 'heroBG';
@@ -9,6 +10,7 @@
 <div class={`${classname} h-screen`}>
 	<Navbar />
 	<slot></slot>
+	<Footer />
 </div>
 
 <style>
