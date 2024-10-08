@@ -2,13 +2,14 @@
 	import ArrowLeft from 'carbon-icons-svelte/lib/ArrowLeft.svelte';
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
+	import Location from "carbon-icons-svelte/lib/Location.svelte";
 </script>
 
 <div
 	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
 >
 	<div
-		class={`navbar flex w-full rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
+		class={`navbar flex w-full items-center rounded-lg px-6 py-1 justify-between ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
 	>
 		{#if $page.route.id === '/'}
 			<a href="/" class="flex items-center gap-4">
@@ -38,6 +39,11 @@
 				</div>
 			</button>
 		{/if}
+		<div>
+			<a href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA" target="_blank">
+				<Location size={32} class="hover:text-red transition-all" />
+			</a>
+		</div>
 	</div>
 </div>
 
