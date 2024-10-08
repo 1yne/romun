@@ -8,7 +8,7 @@
 	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
 >
 	<div
-		class={`navbar flex w-full  rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
+		class={`navbar flex w-full rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
 	>
 		{#if $page.route.id === '/'}
 			<a href="/" class="flex items-center gap-4">

@@ -3,12 +3,11 @@
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 
-	onMount(() => transitions())
+	onMount(() => transitions());
 
 	let windowWidth = 0;
 
 	export let data: PageData;
-
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
