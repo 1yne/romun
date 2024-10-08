@@ -47,7 +47,7 @@
 				class="button primaryBtnStyle max relative bg-none p-0 font-montserrat text-xl text-white transition-all max-[844px]:mt-6 max-[645px]:mt-5 min-[845px]:mt-8"
 			>
 				<div
-					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+					class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg bg-purple"
 				></div>
 				<span
 					class="relative block px-12 py-6 text-sm transition-all max-[645px]:px-8 max-[645px]:py-4"
@@ -57,9 +57,9 @@
 		</div>
 	</div>
 	<div class="letter bg-background p-12 max-[645px]:p-6">
-		<div class="divShadow flex min-h-[40rem] bg-white max-[645px]:flex-col">
+		<div class="divShadow flex min-h-[40rem] bg-white max-[645px]:flex-col rounded-lg">
 			<div
-				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 max-[645px]:w-full"
+				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 max-[645px]:w-full rounded-lg"
 			></div>
 			<div class="w-1/2 p-8 max-[645px]:w-full max-[645px]:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
@@ -93,7 +93,7 @@
 				<a href={logo.link}>
 					<div class="flex-col justify-center gap-6">
 						<div
-							class="flex min-h-96 items-center justify-center rounded-md border border-solid border-white/25 bg-black/25 p-4 transition-all hover:border-white"
+							class="flex min-h-96 items-center justify-center rounded-lg border border-solid border-white/25 bg-black/25 p-4 transition-all hover:border-white"
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
 								<svelte:component this={logo.logo} {...props}></svelte:component>
@@ -128,7 +128,7 @@
 			in:fly={{ y: 20, delay: 200 }}
 		>
 			<div
-				class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-xl bg-purple"
+				class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg bg-purple"
 			></div>
 			<span class="relative block px-12 py-6 text-sm">REGISTER</span>
 		</button>
