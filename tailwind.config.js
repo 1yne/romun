@@ -9,6 +9,12 @@ export default {
 	darkMode: 'selector',
 
 	theme: {
+		screens: {
+			mobile: {
+				max: "645px"
+			},
+			desktop: "845px"
+		},
 		extend: {
 			colors: {
 				red: 'var(--red)',

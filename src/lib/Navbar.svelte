@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
+	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all mobile:px-6"
 >
 	<div
 		class={`navbar flex w-full items-center justify-between rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
@@ -24,7 +24,7 @@
 					out:fly|global={{ y: -10, duration: 500 }}
 				/>
 				<h1
-					class="heading text-2xl font-black text-white max-[645px]:text-lg "
+					class="heading text-2xl font-black text-white mobile:text-lg"
 					in:fly|global={{ y: -10, duration: 500, delay: 700 }}
 					out:fly|global={{ y: -10, duration: 500 }}
 				>
@@ -52,7 +52,7 @@
 
 {#if menuVisible}
 	<div
-		class="menu fixed top-0 z-[100000000] h-full w-full p-12 px-[4.5rem] font-montserrat max-[645px]:px-8"
+		class="menu fixed top-0 z-[100000000] h-full w-full p-12 px-[4.5rem] font-montserrat mobile:px-8"
 		transition:fly={{ y: -20, duration: 150 }}
 	>
 		<div class="flex w-full justify-end">

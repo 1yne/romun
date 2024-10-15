@@ -31,14 +31,14 @@
 		<div class="flex w-full flex-col items-center text-center">
 			<div id="title">
 				<h1
-					class="font-montserrat font-black text-white transition-all max-[844px]:text-8xl max-[645px]:text-7xl min-[845px]:text-9xl"
+					class="font-montserrat font-black text-white transition-all max-[844px]:text-8xl mobile:text-7xl desktop:text-9xl"
 				>
 					RoMUN 2024
 				</h1>
 			</div>
 			<div id="date">
 				<h1
-					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl max-[645px]:text-xl min-[845px]:mt-5 min-[845px]:text-3xl"
+					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
 					October 24th-25th
 				</h1>
@@ -46,12 +46,12 @@
 			<RegisterButton />
 		</div>
 	</div>
-	<div class="letter bg-background p-12 max-[645px]:p-6">
-		<div class="divShadow flex min-h-[40rem] bg-white max-[645px]:flex-col rounded-lg">
+	<div class="letter bg-background p-12 mobile:p-6">
+		<div class="divShadow flex min-h-[40rem] bg-white mobile:flex-col rounded-lg">
 			<div
-				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 max-[645px]:w-full max-[645px]:rounded-b-none rounded-lg"
+				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 mobile:w-full mobile:rounded-b-none rounded-lg"
 			></div>
-			<div class="w-1/2 p-8 max-[645px]:w-full max-[645px]:px-6">
+			<div class="w-1/2 p-8 mobile:w-full mobile:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
 				<p class="font-montserrat">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti
@@ -72,7 +72,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="committeeWrapper p-12 max-[645px]:p-6">
+	<div class="committeeWrapper p-12 mobile:p-6">
 		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			COMMITTEES
 		</h1>
@@ -95,7 +95,7 @@
 			{/each}
 		</div>
 	</div>
-	<div class="aboutWrapper bg-blue p-12 max-[645px]:p-6">
+	<div class="aboutWrapper bg-blue p-12 mobile:p-6">
 		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
