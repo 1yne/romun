@@ -2,14 +2,17 @@
 	import ArrowLeft from 'carbon-icons-svelte/lib/ArrowLeft.svelte';
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
-	import Location from "carbon-icons-svelte/lib/Location.svelte";
+	import Menu from 'carbon-icons-svelte/lib/Menu.svelte';
+	import Close from "carbon-icons-svelte/lib/Close.svelte";
+
+	let menuVisible = false;
 </script>
 
 <div
 	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all max-[645px]:px-6"
 >
 	<div
-		class={`navbar flex w-full items-center rounded-lg px-6 py-1 justify-between ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
+		class={`navbar flex w-full items-center justify-between rounded-lg px-6 py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all'}`}
 	>
 		{#if $page.route.id === '/'}
 			<a href="/" class="flex items-center gap-4">
@@ -40,12 +43,23 @@
 			</button>
 		{/if}
 		<div>
-			<a href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA" target="_blank">
-				<Location size={32} class="hover:text-red transition-all" />
-			</a>
+			<button on:click={() => (menuVisible = true)}>
+				<Menu size={32} class="transition-all hover:text-red" />
+			</button>
 		</div>
 	</div>
 </div>
+
+{#if menuVisible}
+	<div class="menu z-[100000000] h-full w-full font-montserrat fixed top-0 p-12" transition:fly={{ y: -20, duration: 150 }}>
+		<div class="w-full flex justify-between px-6">
+			<h1 class="text-3xl font-bold text-white">MENU</h1>
+			<button on:click={() => menuVisible = false}>
+				<Close size={32} class="text-white" />
+			</button>
+		</div>
+	</div>
+{/if}
 
 <style>
 	@keyframes shadow-in {
@@ -72,5 +86,9 @@
 		animation: fade-text-in linear both;
 		animation-timeline: scroll();
 		animation-range: 0% 25%;
+	}
+
+	.menu {
+		backdrop-filter: blur(60px);
 	}
 </style>
