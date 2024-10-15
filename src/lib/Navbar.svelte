@@ -63,25 +63,25 @@
 		<div class="links mt-12 flex flex-col gap-8">
 			<a
 				href="/"
-				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				class="link link--metis relative w-full pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
 				on:click={() => menuVisible = false}
 				>Country Matrix</a
 			>
 			<a
 				href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA"
 				target="_blank"
-				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				class="link link--metis relative w-full pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
 				>Location</a
 			>
 			<a
 				href="/"
-				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				class="link link--metis relative w-full pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
 				on:click={() => menuVisible = false}
 				>About</a
 			>
 			<a
 				href="/"
-				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				class="link link--metis relative w-full pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
 				on:click={() => menuVisible = false}
 				>Contact Us</a
 			>
