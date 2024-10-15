@@ -49,7 +49,7 @@
 	<div class="letter bg-background p-12 max-[645px]:p-6">
 		<div class="divShadow flex min-h-[40rem] bg-white max-[645px]:flex-col rounded-lg">
 			<div
-				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 max-[645px]:w-full rounded-lg"
+				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 max-[645px]:w-full max-[645px]:rounded-b-none rounded-lg"
 			></div>
 			<div class="w-1/2 p-8 max-[645px]:w-full max-[645px]:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
