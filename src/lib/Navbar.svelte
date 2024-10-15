@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
 	import Menu from 'carbon-icons-svelte/lib/Menu.svelte';
-	import Close from "carbon-icons-svelte/lib/Close.svelte";
+	import Close from 'carbon-icons-svelte/lib/Close.svelte';
 
 	let menuVisible = false;
 </script>
@@ -51,12 +51,40 @@
 </div>
 
 {#if menuVisible}
-	<div class="menu z-[100000000] h-full w-full font-montserrat fixed top-0 p-12" transition:fly={{ y: -20, duration: 150 }}>
-		<div class="w-full flex justify-between px-6">
-			<h1 class="text-3xl font-bold text-white">MENU</h1>
-			<button on:click={() => menuVisible = false}>
+	<div
+		class="menu fixed top-0 z-[100000000] h-full w-full p-12 px-[4.5rem] font-montserrat max-[645px]:px-6"
+		transition:fly={{ y: -20, duration: 150 }}
+	>
+		<div class="flex w-full justify-end">
+			<button on:click={() => (menuVisible = false)}>
 				<Close size={32} class="text-white" />
 			</button>
+		</div>
+		<div class="links mt-12 flex flex-col gap-8">
+			<a
+				href="/"
+				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				on:click={() => menuVisible = false}
+				>Country Matrix</a
+			>
+			<a
+				href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA"
+				target="_blank"
+				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				>Location</a
+			>
+			<a
+				href="/"
+				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				on:click={() => menuVisible = false}
+				>About</a
+			>
+			<a
+				href="/"
+				class="link link--metis relative w-full pb-2 text-6xl font-semibold text-white before:content-['']"
+				on:click={() => menuVisible = false}
+				>Contact Us</a
+			>
 		</div>
 	</div>
 {/if}
@@ -90,5 +118,27 @@
 
 	.menu {
 		backdrop-filter: blur(60px);
+	}
+
+	.link::before,
+	.link::after {
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background: currentColor;
+		top: 100%;
+		left: 0;
+		pointer-events: none;
+	}
+
+	.link--metis::before {
+		transform-origin: 100% 50%;
+		transform: scale3d(0, 1, 1);
+		transition: transform 0.15s;
+	}
+
+	.link--metis:hover::before {
+		transform-origin: 0% 50%;
+		transform: scale3d(1, 1, 1);
 	}
 </style>
