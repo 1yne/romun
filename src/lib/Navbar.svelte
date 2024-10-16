@@ -42,7 +42,7 @@
 				</div>
 			</button>
 		{/if}
-		<div>
+		<div class="h-full flex items-center">
 			<button on:click={() => (menuVisible = true)}>
 				<Menu size={32} class="transition-all hover:text-red" />
 			</button>
@@ -55,7 +55,7 @@
 		class="menu fixed top-0 z-[100000000] h-full w-full p-12 px-[4.5rem] font-montserrat mobile:px-8"
 		transition:fly={{ y: -20, duration: 150 }}
 	>
-		<div class="flex w-full justify-end">
+		<div class="flex w-full justify-end items-center">
 			<button on:click={() => (menuVisible = false)}>
 				<Close size={32} class="text-white transition-all hover:text-red" />
 			</button>
@@ -63,27 +63,33 @@
 		<div class="links mt-12 inline-block">
 			<a
 				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
 				on:click={() => menuVisible = false}
 				>Country Matrix</a
 			>
 			<a
 				href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA"
 				target="_blank"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
 				>Location</a
 			>
 			<a
 				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
 				on:click={() => menuVisible = false}
 				>About</a
 			>
 			<a
-				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-['']"
+				href="/contact"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
 				on:click={() => menuVisible = false}
 				>Contact Us</a
+			>
+			<a
+				href="/"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
+				on:click={() => menuVisible = false}
+				>Register</a
 			>
 		</div>
 	</div>

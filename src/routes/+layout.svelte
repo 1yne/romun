@@ -4,13 +4,15 @@
 	import Footer from '$lib/Footer.svelte';
 	import { page } from '$app/stores';
 
-	$: classname = $page.route.id?.includes('committees') ? 'committeeBG' : 'heroBG';
+	$: classname = $page.route.id == "/" ? 'heroBG' : 'committeeBG';
 </script>
 
 <div class={`${classname} h-screen`}>
 	<Navbar />
 	<slot></slot>
-	<Footer />
+	{#if $page.route.id != "/contact"}
+		<Footer />
+	{/if}
 </div>
 
 <style>
