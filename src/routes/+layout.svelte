@@ -10,7 +10,7 @@
 <div class={`${classname} h-screen`}>
 	<Navbar />
 	<slot></slot>
-	{#if $page.route.id != "/contact"}
+	{#if $page.route.id === "/"}
 		<Footer />
 	{/if}
 </div>
