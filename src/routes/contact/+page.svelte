@@ -72,7 +72,7 @@
 			<Label for="contactBack" class="text-md mb-2">How do you want us to contact you?</Label>
 			<div class="mb-4 flex gap-8">
 				<Radio
-					name="isWhatsapp"
+					name="contactMethod"
 					id="contactBack"
 					on:change={() => {
 						whatsapp = !whatsapp;
@@ -82,7 +82,7 @@
 					>WhatsApp</Radio
 				>
 				<Radio
-					name="isEmail"
+					name="contactMethod"
 					id="contactBack"
 					on:change={() => {
 						email = !email;
