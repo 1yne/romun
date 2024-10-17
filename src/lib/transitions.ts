@@ -66,4 +66,20 @@ export function transitions() {
 		opacity: 0,
 		duration: 0.5
 	});
+	gsap.from(
+		[
+			'#contactHeading',
+			'#contactName',
+			'#contactSchool',
+			'#contactMessage',
+			'#contactButton',
+			'#contactMethod'
+		],
+		{
+			x: -20,
+			stagger: 0.3,
+			opacity: 0,
+			delay: 0.005
+		}
+	);
 }

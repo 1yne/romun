@@ -3,6 +3,10 @@
 	import type { ActionData } from './$types';
 	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
 	import { onMount } from 'svelte';
+	import { transitions } from '$lib/transitions';
+	import { fly } from 'svelte/transition';
+
+	onMount(() => transitions());
 
 	let whatsapp = false,
 		email = false;
@@ -18,7 +22,7 @@
 					'--toastBarBackground': '#218074',
 					'--toastBorderRadius': '6px',
 					'--toastPadding': '1rem 0.5rem',
-					'--toastMargin': "-0.5rem 1rem"
+					'--toastMargin': '-0.5rem 1rem'
 				}
 			});
 		}
@@ -39,40 +43,47 @@
 </svelte:head>
 
 <div class="p-12 pt-28 font-montserrat">
-	<h1 class="my-6 text-6xl font-bold text-white">Contact Us</h1>
+	<h1 class="my-6 text-6xl font-bold text-white" id="contactHeading">Contact Us</h1>
 	<form class="flex w-full gap-8 mobile:flex-col mobile:gap-2" method="POST">
 		<div class="flex w-1/2 flex-col mobile:w-full">
-			<Label for="name" class="text-md mb-2">Name:</Label>
-			<Input
-				id="name"
-				name="name"
-				required
-				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
-			/>
-			<Label for="school" class="text-md mb-2">School:</Label>
-			<Input
-				id="school"
-				name="school"
-				required
-				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
-			/>
-			<Label for="message" class="text-md mb-2">Message:</Label>
-			<Textarea
-				size="lg"
-				id="message"
-				name="message"
-				required
-				rows={12}
-				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white desktop:mb-12 dark:focus:!border-white dark:focus:ring-0"
-			/>
+			<div id="contactName">
+				<Label for="name" class="text-md mb-2">Name:</Label>
+				<Input
+					id="name"
+					name="name"
+					required
+					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
+				/>
+			</div>
+			<div id="contactSchool">
+				<Label for="school" class="text-md mb-2">School:</Label>
+				<Input
+					id="school"
+					name="school"
+					required
+					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
+				/>
+			</div>
+			<div id="contactMessage">
+				<Label for="message" class="text-md mb-2">Message:</Label>
+				<Textarea
+					size="lg"
+					id="message"
+					name="message"
+					required
+					rows={12}
+					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white desktop:mb-12 dark:focus:!border-white dark:focus:ring-0"
+				/>
+			</div>
 			<Button
 				class="w-max min-w-72 mobile:hidden"
 				type="submit"
 				size="lg"
+				id="contactButton"
 				disabled={!whatsapp && !email}>Send</Button
 			>
 		</div>
-		<div class="flex w-1/2 flex-col mobile:w-full">
+		<div class="flex w-1/2 flex-col mobile:w-full" id="contactMethod">
 			<Label for="contactBack" class="text-md mb-2">How do you want us to contact you?</Label>
 			<div class="mb-4 flex gap-8">
 				<Radio
@@ -97,24 +108,34 @@
 				>
 			</div>
 			{#if whatsapp}
-				<Label for="contactNum" class="text-md mb-2">Contact No:</Label>
-				<Input
-					id="contactNum"
-					name="contactNum"
-					type="tel"
-					required
-					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
-				/>
+				<div
+					in:fly|global={{ y: -20, duration: 500, delay: 700 }}
+					out:fly|global={{ y: -20, duration: 500 }}
+				>
+					<Label for="contactNum" class="text-md mb-2">Contact No:</Label>
+					<Input
+						id="contactNum"
+						name="contactNum"
+						type="tel"
+						required
+						class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
+					/>
+				</div>
 			{/if}
 			{#if email}
-				<Label for="email" class="text-md mb-2">Email:</Label>
-				<Input
-					id="email"
-					name="email"
-					type="email"
-					required
-					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
-				/>
+				<div
+					in:fly|global={{ y: -20, duration: 500, delay: 700 }}
+					out:fly|global={{ y: -20, duration: 500 }}
+				>
+					<Label for="email" class="text-md mb-2">Email:</Label>
+					<Input
+						id="email"
+						name="email"
+						type="email"
+						required
+						class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
+					/>
+				</div>
 			{/if}
 			<Button class="desktop:hidden" type="submit" disabled={!whatsapp && !email}>Send</Button>
 		</div>
