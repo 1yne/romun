@@ -34,6 +34,10 @@
 
 <SvelteToast {options} />
 
+<svelte:head>
+	<title>Contact Us | RoMUN 2024</title>
+</svelte:head>
+
 <div class="p-12 pt-28 font-montserrat">
 	<h1 class="mb-8 text-6xl font-bold text-white">Contact Us</h1>
 	<form class="flex w-full gap-8 mobile:flex-col mobile:gap-2" method="POST">

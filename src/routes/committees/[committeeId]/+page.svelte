@@ -17,6 +17,10 @@
 	Your browser does not support HTML5 video.
 </video>
 
+<svelte:head>
+	<title>{data.name} | RoMUN 2024</title>
+</svelte:head>
+
 <div class="fixed min-h-full min-w-full bg-black/75 pt-28">
 	<div
 		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat mobile:flex-col mobile:items-center mobile:p-8 mobile:pb-12"
