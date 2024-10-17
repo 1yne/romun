@@ -43,14 +43,14 @@
 				id="name"
 				name="name"
 				required
-				class="mb-4 flex max-w-xl !border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 			/>
 			<Label for="school" class="text-md mb-2">School:</Label>
 			<Input
 				id="school"
 				name="school"
 				required
-				class="mb-4 flex max-w-xl !border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 			/>
 			<Label for="message" class="text-md mb-2">Message:</Label>
 			<Textarea
@@ -59,7 +59,7 @@
 				name="message"
 				required
 				rows={12}
-				class="mb-4 flex max-w-xl !border-white/50 !bg-background transition-all hover:!border-white/70 desktop:mb-12 dark:focus:!border-white/70 dark:focus:ring-0"
+				class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white desktop:mb-12 dark:focus:!border-white dark:focus:ring-0"
 			/>
 			<Button
 				class="w-max min-w-72 mobile:hidden"
@@ -78,7 +78,7 @@
 						whatsapp = !whatsapp;
 						email = false;
 					}}
-					class="!border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+					class="!border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 					>WhatsApp</Radio
 				>
 				<Radio
@@ -88,7 +88,7 @@
 						email = !email;
 						whatsapp = false;
 					}}
-					class="!border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+					class="!border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 					>Email</Radio
 				>
 			</div>
@@ -99,7 +99,7 @@
 					name="contactNum"
 					type="tel"
 					required
-					class="mb-4 flex max-w-xl !border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 				/>
 			{/if}
 			{#if email}
@@ -109,7 +109,7 @@
 					name="email"
 					type="email"
 					required
-					class="mb-4 flex max-w-xl !border-white/50 !bg-background transition-all hover:!border-white/70 dark:focus:!border-white/70 dark:focus:ring-0"
+					class="mb-4 flex max-w-xl !border-white/25 !bg-background transition-all hover:!border-white dark:focus:!border-white dark:focus:ring-0"
 				/>
 			{/if}
 			<Button class="desktop:hidden" type="submit" disabled={!whatsapp && !email}>Send</Button>
