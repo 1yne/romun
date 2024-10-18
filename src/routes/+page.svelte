@@ -40,7 +40,7 @@
 				<h1
 					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
-					October 24th-25th
+					November 15th-16th
 				</h1>
 			</div>
 			<RegisterButton />
