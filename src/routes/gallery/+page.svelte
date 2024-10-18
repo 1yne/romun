@@ -21,7 +21,7 @@
 					src={`/gallery/IMG${num}.jpeg`}
 					alt=""
 					id={`IMG${num}`}
-					transition:fly|global={{ x: -200, duration: 250, delay: 250 * num, easing: sineInOut }}
+					in:fly|global={{ x: -200, duration: 250, delay: 250 * num, easing: sineInOut }}
 					class={`h-full w-full object-cover ${num == 4 ? 'col-span-2' : ''} border border-white/25 transition-all hover:border-white`}
 				/>
 			{/each}
