@@ -80,6 +80,12 @@
 				>About</a
 			>
 			<a
+				href="/gallery"
+				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
+				on:click={() => menuVisible = false}
+				>Gallery</a
+			>
+			<a
 				href="/contact"
 				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
 				on:click={() => menuVisible = false}
