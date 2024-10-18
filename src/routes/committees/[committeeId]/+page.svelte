@@ -2,10 +2,15 @@
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
+	import { videoURLStore } from '$lib/stores/videoURLStore';
 
 	onMount(() => transitions());
 
 	let windowWidth = 0;
+	let videoURL = '';
+	$: videoURL = $videoURLStore.filter(
+		(val) => val.pathname.substring(0, val.pathname.length - 9) == data.name
+	)[0]?.url;
 
 	export let data: PageData;
 </script>
@@ -13,7 +18,7 @@
 <svelte:window bind:outerWidth={windowWidth} />
 
 <video autoplay muted loop id="myVideo" class="fixed min-h-full object-cover">
-	<source src={data.video} type="video/mp4" />
+	<source src={videoURL} type="video/mp4" />
 	Your browser does not support HTML5 video.
 </video>
 
@@ -41,10 +46,7 @@
 				<p class="mt-4 w-1/2 text-white mobile:w-auto">{data.description}</p>
 			</div>
 			<div id="committeeRegister" class="mt-12">
-				<a
-					href="/register"
-					class="mt-24 text-white max-[844px]:mt-6 mobile:mt-5 desktop:mt-12"
-				>
+				<a href="/register" class="max-[844px]:mt-6 mt-24 text-white mobile:mt-5 desktop:mt-12">
 					<span class="btn registerBtn border-0 border-solid px-12 py-4">Register</span>
 				</a>
 			</div>
