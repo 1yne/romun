@@ -28,14 +28,14 @@
 
 <div class="fixed min-h-full min-w-full bg-black/75 pt-28">
 	<div
-		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-montserrat mobile:flex-col mobile:items-center mobile:p-8 mobile:pb-12"
+		class="flex min-h-full min-w-full gap-12 px-12 py-4 font-playfair mobile:flex-col mobile:items-center mobile:p-8 mobile:pb-12"
 	>
 		<div>
 			<div id="committeeTitle">
-				<h1 class="text-9xl font-black text-white mobile:text-6xl">{data.name}</h1>
+				<h1 class="text-9xl font-black text-white mobile:text-6xl font-montserrat">{data.name}</h1>
 			</div>
 			<div id="committeeName">
-				<h1 class="mt-2 text-2xl font-light italic text-gray-500">{data.fullName}</h1>
+				<h1 class="mt-2 text-2xl font-light italic text-gray-500 font-montserrat">{data.fullName}</h1>
 			</div>
 			<div id="committeeAgenda">
 				<div>
@@ -46,7 +46,7 @@
 				<p class="mt-4 w-1/2 text-white mobile:w-auto">{data.description}</p>
 			</div>
 			<div id="committeeRegister" class="mt-12">
-				<a href="/register" class="max-[844px]:mt-6 mt-24 text-white mobile:mt-5 desktop:mt-12">
+				<a href="/register" class="max-[844px]:mt-6 mt-24 text-white mobile:mt-5 desktop:mt-12 font-montserrat">
 					<span class="btn registerBtn border-0 border-solid px-12 py-4">Register</span>
 				</a>
 			</div>

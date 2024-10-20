@@ -42,8 +42,8 @@
 	<title>Contact Us | RoMUN 2024</title>
 </svelte:head>
 
-<div class="p-12 pt-28 font-montserrat">
-	<h1 class="my-6 text-6xl font-bold text-white" id="contactHeading">Contact Us</h1>
+<div class="p-12 pt-28 font-playfair">
+	<h1 class="my-6 text-6xl font-bold text-white font-montserrat" id="contactHeading">Contact Us</h1>
 	<form class="flex w-full gap-8 mobile:flex-col mobile:gap-2" method="POST">
 		<div class="flex w-1/2 flex-col mobile:w-full">
 			<div id="contactName">
@@ -76,7 +76,7 @@
 				/>
 			</div>
 			<Button
-				class="w-max min-w-72 mobile:hidden"
+				class="w-max min-w-72 mobile:hidden font-montserrat"
 				type="submit"
 				size="lg"
 				id="contactButton"
@@ -137,7 +137,7 @@
 					/>
 				</div>
 			{/if}
-			<Button class="desktop:hidden" type="submit" disabled={!whatsapp && !email}>Send</Button>
+			<Button class="desktop:hidden font-montserrat" type="submit" disabled={!whatsapp && !email}>Send</Button>
 		</div>
 	</form>
 </div>

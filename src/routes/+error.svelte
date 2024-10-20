@@ -4,10 +4,10 @@
 	import { Button } from 'flowbite-svelte';
 </script>
 
-<div class="flex w-full flex-col items-center pt-28">
+<div class="flex w-full flex-col items-center pt-28 font-montserrat">
 	<ErrorLogo width={1000} />
 	<h1
-		class="mb-12 font-montserrat text-6xl font-bold uppercase text-white mobile:mb-6 mobile:text-4xl"
+		class="mb-12 font-playfair text-6xl font-bold uppercase text-white mobile:mb-6 mobile:text-4xl"
 	>
 		{$page.error?.message}
 	</h1>

@@ -38,7 +38,7 @@
 			</div>
 			<div id="date">
 				<h1
-					class="font-montserrat font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl mobile:text-xl desktop:mt-5 desktop:text-3xl"
+					class="font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
 					November 15th-16th
 				</h1>
@@ -53,7 +53,7 @@
 			></div>
 			<div class="w-1/2 p-8 mobile:w-full mobile:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
-				<p class="font-montserrat">
+				<p>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti
 					facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit
 					consectetur doloremque eius laborum officiis aut asperiores, esse voluptates. Aliquam eum
@@ -99,7 +99,7 @@
 		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
 			ABOUT
 		</h1>
-		<p class="about font-montserrat text-lg text-white" in:fade>
+		<p class="about text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
 			to engage in dynamic diplomatic simulations. The conference will feature a range of
