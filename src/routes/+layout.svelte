@@ -37,7 +37,7 @@
 	}
 
 	.heroBG {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(13, 13, 13, 1)), url('/BG7.jpg');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(13, 13, 13, 1)), url('/Background.JPG');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
