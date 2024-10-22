@@ -14,7 +14,7 @@
 
 	const props = {
 		fill: 'D60202',
-		width: 150
+		width: 200
 	};
 </script>
 
@@ -80,7 +80,7 @@
 			class="noScrollbar committees flex min-h-[28rem] w-full justify-between gap-2 overflow-x-scroll"
 		>
 			{#each $committeeDataStore as logo}
-				<a href={logo.link}>
+				<a href={logo.link} class="w-full">
 					<div class="flex-col justify-center gap-6">
 						<div
 							class="flex min-h-96 items-center justify-center rounded-lg border border-solid border-white/25 bg-black/25 p-4 transition-all hover:border-white"
