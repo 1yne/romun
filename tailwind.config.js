@@ -18,6 +18,7 @@ export default {
 		extend: {
 			colors: {
 				red: 'var(--red)',
+				redHover: 'var(--redHover)',
 				purple: 'var(--purple)',
 				purpleHover: 'var(--purpleHover)',
 				background: 'var(--background)',
