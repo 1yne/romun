@@ -49,8 +49,10 @@
 	<div class="bg-background p-12 mobile:p-6">
 		<div class="divShadow letter flex min-h-[40rem] rounded-lg bg-white mobile:flex-col">
 			<div
-				class="flex min-h-96 w-1/2 items-end rounded-lg bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 mobile:w-full mobile:rounded-b-none"
-			></div>
+				class="secGenPic flex min-h-96 w-1/2 items-end rounded-lg bg-cover bg-center bg-no-repeat p-8 text-white mobile:w-full mobile:rounded-b-none"
+			>
+				<h1>Anurag Girish</h1>
+			</div>
 			<div class="w-1/2 p-8 mobile:w-full mobile:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
 				<p>
@@ -141,5 +143,10 @@
 
 	.aboutWrapper {
 		background-color: rgba(214, 2, 2, 0.2);
+	}
+
+	.secGenPic {
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+			url('/SecGenPic.jpeg');
 	}
 </style>
