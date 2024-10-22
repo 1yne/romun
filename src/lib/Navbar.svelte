@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all mobile:px-6"
+	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all mobile:px-6 font-montserrat"
 >
 	<div
 		class={`navbar flex w-full items-center justify-between rounded-lg px-6 border border-transparent py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all border-white'}`}
