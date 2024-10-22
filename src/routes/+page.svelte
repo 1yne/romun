@@ -31,14 +31,14 @@
 		<div class="flex w-full flex-col items-center text-center">
 			<div id="title">
 				<h1
-					class="font-montserrat font-black text-white transition-all max-[844px]:text-8xl mobile:text-7xl desktop:text-9xl"
+					class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-7xl desktop:text-9xl"
 				>
 					RoMUN 2024
 				</h1>
 			</div>
 			<div id="date">
 				<h1
-					class="font-semibold text-white transition-all max-[844px]:mt-3 max-[844px]:text-2xl mobile:text-xl desktop:mt-5 desktop:text-3xl"
+					class="max-[844px]:mt-3 max-[844px]:text-2xl font-semibold text-white transition-all mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
 					November 15th-16th
 				</h1>
@@ -46,10 +46,10 @@
 			<RegisterButton />
 		</div>
 	</div>
-	<div class="letter bg-background p-12 mobile:p-6">
-		<div class="divShadow flex min-h-[40rem] bg-white mobile:flex-col rounded-lg">
+	<div class="bg-background p-12 mobile:p-6">
+		<div class="divShadow letter flex min-h-[40rem] rounded-lg bg-white mobile:flex-col">
 			<div
-				class="flex min-h-96 w-1/2 items-end bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 mobile:w-full mobile:rounded-b-none rounded-lg"
+				class="flex min-h-96 w-1/2 items-end rounded-lg bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-8 mobile:w-full mobile:rounded-b-none"
 			></div>
 			<div class="w-1/2 p-8 mobile:w-full mobile:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
