@@ -1,10 +1,9 @@
 <script>
 	import { fly } from 'svelte/transition';
-	export let homePage = false
 </script>
 
 <button
-	class={`button primaryBtnStyle register relative ${homePage ? "mt-9" : ""} bg-none p-0 font-montserrat text-white transition-all`}
+	class={`button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all`}
 	in:fly={{ y: 20, delay: 200 }}
 >
 	<div
