@@ -20,6 +20,12 @@ export function transitions() {
 		opacity: 0,
 		ease: 'power2'
 	});
+	gsap.from('.ebHeading', {
+		scrollTrigger: '.ebHeading',
+		duration: 1,
+		opacity: 0,
+		ease: 'power2'
+	});
 	gsap.from('.about', {
 		scrollTrigger: '.about',
 		x: -400,
@@ -39,6 +45,26 @@ export function transitions() {
 		duration: 1,
 		opacity: 0,
 		ease: 'power2'
+	});
+	gsap.from('.registerSection', {
+		scrollTrigger: '.registerSection',
+		y: 40,
+		duration: 1,
+		opacity: 0,
+		ease: 'power2'
+	});
+	gsap.from('#school', {
+		scrollTrigger: '#school',
+		y: 40,
+		duration: 1,
+		opacity: 0,
+		ease: 'power2'
+	});
+	gsap.from(['#logoInstagram', '#logoGithub', '#logoMail', '#logoLocation'], {
+		scrollTrigger: '.registerSection',
+		y: 20,
+		stagger: 0.3,
+		opacity: 0
 	});
 
 	gsap.from(['#title', '#date', '#register'], {

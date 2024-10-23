@@ -1,10 +1,5 @@
-<script>
-	import { fly } from 'svelte/transition';
-</script>
-
 <button
-	class={`button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all`}
-	in:fly={{ y: 20, delay: 200 }}
+	class="button primaryBtnStyle register relative mt-9 bg-none p-0 font-montserrat text-white transition-all"
 >
 	<div
 		class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg bg-purple"

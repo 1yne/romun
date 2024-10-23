@@ -75,7 +75,7 @@
 		</div>
 	</div>
 	<div class="committeeWrapper p-12 mobile:p-6">
-		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
+		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white">
 			COMMITTEES
 		</h1>
 		<div
@@ -101,8 +101,27 @@
 			{/each}
 		</div>
 	</div>
-	<div class="aboutWrapper bg-blue p-12 mobile:p-6">
-		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white" in:fly||global={{ x: -50 }}>
+	<div class="bg-background mobile:p-6 py-12">
+		<h1 class="ebHeading mb-12 text-3xl font-bold text-white mx-12">
+			Meet the Executive Board
+		</h1>
+		<div class="flex w-full">
+			{#each [0, 1, 2, 3, 4] as num}
+				<div class="w-full min-h-96 ebImage flex items-end p-6 bg-[url('/LetterFromSG.jpg')] bg-blend-overlay bg-black/35 bg-cover bg-center bg-no-repeat">
+					<h1 class="text-white">Antonio Guiterres</h1>
+				</div>
+			{/each}
+		</div>
+		<div class="flex w-full">
+			{#each [5, 6, 7, 8, 9] as num}
+				<div class="w-full min-h-96 flex items-end p-6 bg-[url('/LetterFromSG.jpg')] bg-blend-overlay bg-black/35 bg-cover bg-center bg-no-repeat">
+					<h1 class="text-white">Antonio Guiterres</h1>
+				</div>
+			{/each}
+		</div>
+	</div>
+	<div class="committeeWrapper p-12 mobile:p-6">
+		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white">
 			ABOUT
 		</h1>
 		<p class="about text-lg text-white" in:fade>
@@ -143,10 +162,6 @@
 
 	.committeeWrapper {
 		background-color: rgba(41, 35, 92, 0.5);
-	}
-
-	.aboutWrapper {
-		background-color: rgba(214, 2, 2, 0.2);
 	}
 
 	.secGenPic {

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import ErrorLogo from '$lib/ErrorLogo.svelte';
+	import ErrorLogo from '$lib/logos/ErrorLogo.svelte';
 	import { Button } from 'flowbite-svelte';
 </script>
 

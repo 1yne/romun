@@ -143,14 +143,12 @@
 </div>
 
 <style>
-	/* Chrome, Safari, Edge, Opera */
 	:global(input::-webkit-outer-spin-button),
 	:global(input::-webkit-inner-spin-button) {
 		-webkit-appearance: none;
 		margin: 0;
 	}
 
-	/* Firefox */
 	:global(input[type='number']) {
 		-moz-appearance: textfield;
 		appearance: textfield;

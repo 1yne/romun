@@ -6,16 +6,12 @@
 
 	onMount(() => transitions());
 
-	let windowWidth = 0;
-	let videoURL = '';
 	$: videoURL = $videoURLStore.filter(
 		(val) => val.pathname.substring(0, val.pathname.length - 9) == data.name
 	)[0]?.url;
 
 	export let data: PageData;
 </script>
-
-<svelte:window bind:outerWidth={windowWidth} />
 
 <video autoplay muted loop id="myVideo" class="fixed min-h-full object-cover">
 	<source src={videoURL} type="video/mp4" />
