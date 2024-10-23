@@ -99,26 +99,12 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bg-background py-12 mobile:p-6">
-		<h1 class="ebHeading text-3xl font-bold text-white mobile:mb-4 desktop:mx-12 desktop:mb-12">
+	<div class="bg-background p-12 mobile:p-6">
+		<h1 class="ebHeading text-3xl font-bold text-white mobile:mb-4 desktop:mb-12">
 			Meet the Executive Board
 		</h1>
-		<!-- <div class="flex w-full">
-			{#each [0, 1, 2, 3, 4] as num}
-				<div class="w-full min-h-96 ebImage flex items-end p-6 bg-[url('/LetterFromSG.jpg')] bg-blend-overlay bg-black/35 bg-cover bg-center bg-no-repeat">
-					<h1 class="text-white">Antonio Guiterres</h1>
-				</div>
-			{/each}
-		</div>
-		<div class="flex w-full">
-			{#each [5, 6, 7, 8, 9] as num}
-				<div class="w-full min-h-96 flex items-end p-6 bg-[url('/LetterFromSG.jpg')] bg-blend-overlay bg-black/35 bg-cover bg-center bg-no-repeat">
-					<h1 class="text-white">Antonio Guiterres</h1>
-				</div>
-			{/each}
-		</div> -->
 		<div
-			class="max-[844px]:grid-cols-2 grid grid-rows-3 gap-4 mobile:grid-cols-1 desktop:grid-cols-4"
+			class="max-[844px]:grid-cols-2 grid desktop:grid-rows-2 mobile:grid-cols-1 desktop:grid-cols-5 mobile:gap-y-4"
 		>
 			{#each Array(10).keys() as num}
 				<div
