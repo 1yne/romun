@@ -8,11 +8,11 @@
 <div
 	class="footer flex flex-col gap-12 bg-background bg-cover bg-no-repeat p-12 font-montserrat"
 >
-	<div class="w-full flex justify-between text-white items-center bg-white/10 rounded-lg p-6 px-12 registerSection">
+	<div class="w-full flex mobile:flex-col mobile:gap-4 justify-between text-white items-center bg-white/10 rounded-lg p-6 px-12 registerSection">
 		<h1 class="font-black text-3xl">Excited?</h1>
 		<button class="text-sm bg-redHover p-6 rounded-lg px-12 hover:bg-red transition-all">REGISTER</button>
 	</div>
-	<div class="w-full flex gap-8 justify-between">
+	<div class="w-full flex gap-8 justify-between mobile:flex-col">
 		<div class="flex gap-8">
 			<a href="https://www.instagram.com/romun_24/" target="_blank" id="logoInstagram">
 				<LogoInstagram class="text-white transition-all hover:text-red" size={24}/>

@@ -47,7 +47,10 @@ export function transitions() {
 		ease: 'power2'
 	});
 	gsap.from('.registerSection', {
-		scrollTrigger: '.registerSection',
+		scrollTrigger: {
+			trigger: '.registerSection',
+			start: 'top 90%'
+		},
 		y: 40,
 		duration: 1,
 		opacity: 0,

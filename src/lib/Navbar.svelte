@@ -9,10 +9,10 @@
 </script>
 
 <div
-	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 text-white transition-all mobile:px-6 font-montserrat"
+	class="fixed top-0 z-[1000] flex h-28 w-full p-4 px-12 font-montserrat text-white transition-all mobile:px-6"
 >
 	<div
-		class={`navbar flex w-full items-center justify-between rounded-lg px-6 border border-transparent py-1 ${$page.route.id === '/' ? '' : 'bg-background transition-all border-white'}`}
+		class={`navbar flex w-full items-center justify-between rounded-lg border border-transparent px-6 py-1 ${$page.route.id === '/' ? '' : 'border-white bg-background transition-all'}`}
 	>
 		{#if $page.route.id === '/'}
 			<a href="/" class="flex items-center gap-4">
@@ -42,7 +42,7 @@
 				</div>
 			</button>
 		{/if}
-		<div class="h-full flex items-center">
+		<div class="flex h-full items-center">
 			<button on:click={() => (menuVisible = true)}>
 				<Menu size={32} class="transition-all hover:text-red" />
 			</button>
@@ -55,7 +55,7 @@
 		class="menu fixed top-0 z-[100000000] h-full w-full p-12 px-[4.5rem] font-montserrat mobile:px-8"
 		transition:fly={{ y: -20, duration: 150 }}
 	>
-		<div class="flex w-full justify-end items-center">
+		<div class="flex w-full items-center justify-end">
 			<button on:click={() => (menuVisible = false)}>
 				<Close size={32} class="text-white transition-all hover:text-red" />
 			</button>
@@ -63,39 +63,34 @@
 		<div class="links mt-12 inline-block">
 			<a
 				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
-				on:click={() => menuVisible = false}
-				>Country Matrix</a
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				on:click={() => (menuVisible = false)}>Country Matrix</a
 			>
 			<a
 				href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA"
 				target="_blank"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
 				>Location</a
 			>
 			<a
 				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
-				on:click={() => menuVisible = false}
-				>About</a
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				on:click={() => (menuVisible = false)}>About</a
 			>
 			<a
 				href="/gallery"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
-				on:click={() => menuVisible = false}
-				>Gallery</a
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				on:click={() => (menuVisible = false)}>Gallery</a
 			>
 			<a
 				href="/contact"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
-				on:click={() => menuVisible = false}
-				>Contact Us</a
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				on:click={() => (menuVisible = false)}>Contact Us</a
 			>
 			<a
 				href="/"
-				class="link link--metis relative flex mb-6 pb-2 text-6xl mobile:text-4xl font-semibold text-white before:content-[''] w-max"
-				on:click={() => menuVisible = false}
-				>Register</a
+				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				on:click={() => (menuVisible = false)}>Register</a
 			>
 		</div>
 	</div>
@@ -127,6 +122,19 @@
 		animation: fade-text-in linear both;
 		animation-timeline: scroll();
 		animation-range: 0% 25%;
+	}
+
+	@media (max-width: 645px) {
+		.navbar {
+			animation: shadow-in linear both;
+			animation-timeline: scroll();
+			animation-range: 0% 1%;
+		}
+		.heading {
+			animation: fade-text-in linear both;
+			animation-timeline: scroll();
+			animation-range: 0% 1%;
+		}
 	}
 
 	.menu {

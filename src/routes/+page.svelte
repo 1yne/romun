@@ -38,7 +38,7 @@
 			</div>
 			<div id="date">
 				<h1
-					class="max-[844px]:mt-3 max-[844px]:text-2xl font-semibold text-white transition-all mobile:text-xl desktop:mt-5 desktop:text-3xl"
+					class="max-[844px]:mt-3 max-[844px]:text-2xl mobile:mt-3 font-semibold text-white transition-all mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
 					November 15th-16th
 				</h1>
@@ -75,9 +75,7 @@
 		</div>
 	</div>
 	<div class="committeeWrapper p-12 mobile:p-6">
-		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white">
-			COMMITTEES
-		</h1>
+		<h1 class="committeesHeading mb-6 text-3xl font-bold text-white">COMMITTEES</h1>
 		<div
 			class="noScrollbar committees flex min-h-[28rem] w-full justify-between gap-2 overflow-x-scroll"
 		>
@@ -101,11 +99,11 @@
 			{/each}
 		</div>
 	</div>
-	<div class="bg-background mobile:p-6 py-12">
-		<h1 class="ebHeading mb-12 text-3xl font-bold text-white mx-12">
+	<div class="bg-background py-12 mobile:p-6">
+		<h1 class="ebHeading text-3xl font-bold text-white mobile:mb-4 desktop:mx-12 desktop:mb-12">
 			Meet the Executive Board
 		</h1>
-		<div class="flex w-full">
+		<!-- <div class="flex w-full">
 			{#each [0, 1, 2, 3, 4] as num}
 				<div class="w-full min-h-96 ebImage flex items-end p-6 bg-[url('/LetterFromSG.jpg')] bg-blend-overlay bg-black/35 bg-cover bg-center bg-no-repeat">
 					<h1 class="text-white">Antonio Guiterres</h1>
@@ -118,12 +116,21 @@
 					<h1 class="text-white">Antonio Guiterres</h1>
 				</div>
 			{/each}
+		</div> -->
+		<div
+			class="max-[844px]:grid-cols-2 grid grid-rows-3 gap-4 mobile:grid-cols-1 desktop:grid-cols-4"
+		>
+			{#each Array(10).keys() as num}
+				<div
+					class="flex min-h-96 w-full items-end bg-black/35 bg-[url('/LetterFromSG.jpg')] bg-cover bg-center bg-no-repeat p-6 bg-blend-overlay"
+				>
+					<h1 class="text-white">Antonio Guiterres</h1>
+				</div>
+			{/each}
 		</div>
 	</div>
 	<div class="committeeWrapper p-12 mobile:p-6">
-		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white">
-			ABOUT
-		</h1>
+		<h1 class="aboutHeading mb-6 text-3xl font-bold text-white">ABOUT</h1>
 		<p class="about text-lg text-white" in:fade>
 			The Model United Nations (MUN) competition at Royale Concorde International School is set to
 			be an exhilarating and intellectually stimulating event, drawing students from various schools
