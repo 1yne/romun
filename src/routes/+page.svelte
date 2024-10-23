@@ -88,7 +88,11 @@
 							class="flex min-h-96 items-center justify-center rounded-lg border border-solid border-white/25 bg-black/25 p-4 transition-all hover:border-white"
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
-								<svelte:component this={logo.logo} {...props}></svelte:component>
+								{#if logo.name === 'CCC'}
+									<img src="/CCCLogoEdited.png" alt="" class="w-[300px]" />
+								{:else}
+									<svelte:component this={logo.logo} {...props}></svelte:component>
+								{/if}
 							</div>
 						</div>
 						<h1 class="mt-4 font-montserrat text-xl font-bold text-white">{logo.name}</h1>
@@ -146,7 +150,6 @@
 	}
 
 	.secGenPic {
-		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
-			url('/SecGenPic.jpeg');
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('/SecGenPic.jpeg');
 	}
 </style>
