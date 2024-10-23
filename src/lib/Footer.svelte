@@ -10,7 +10,7 @@
 >
 	<div class="w-full flex justify-between text-white items-center bg-white/10 rounded-lg p-6 px-12 registerSection">
 		<h1 class="font-black text-3xl">Excited?</h1>
-		<button class="text-sm bg-red p-6 rounded-lg px-12 hover:bg-redHover transition-all">REGISTER</button>
+		<button class="text-sm bg-redHover p-6 rounded-lg px-12 hover:bg-red transition-all">REGISTER</button>
 	</div>
 	<div class="w-full flex gap-8 justify-between">
 		<div class="flex gap-8">
