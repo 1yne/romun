@@ -3,6 +3,7 @@
 	import LogoInstagram from "carbon-icons-svelte/lib/LogoInstagram.svelte";
 	import Email from "carbon-icons-svelte/lib/Email.svelte";
 	import Location from "carbon-icons-svelte/lib/Location.svelte";
+	import RegisterPopover from "./RegisterPopover.svelte";
 </script>
 
 <div
@@ -10,7 +11,8 @@
 >
 	<div class="w-full flex mobile:flex-col mobile:gap-4 justify-between text-white items-center bg-white/10 rounded-lg p-6 px-12 registerSection">
 		<h1 class="font-black text-3xl">Excited?</h1>
-		<button class="text-sm bg-redHover p-6 rounded-lg px-12 hover:bg-red transition-all">REGISTER</button>
+		<button class="text-sm bg-redHover p-6 rounded-lg px-12 hover:bg-red transition-all footerRegisterButton">REGISTER</button>
+		<RegisterPopover triggeredBy=".footerRegisterButton" />
 	</div>
 	<div class="w-full flex gap-8 justify-between mobile:flex-col">
 		<div class="flex gap-8">

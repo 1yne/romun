@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 	import Menu from 'carbon-icons-svelte/lib/Menu.svelte';
 	import Close from 'carbon-icons-svelte/lib/Close.svelte';
+	import RegisterPopover from './RegisterPopover.svelte';
 
 	let menuVisible = false;
 </script>
@@ -89,9 +90,10 @@
 			>
 			<a
 				href="/"
-				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
+				class="link link--metis navbarRegisterButton relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
 				on:click={() => (menuVisible = false)}>Register</a
 			>
+			<RegisterPopover triggeredBy=".navbarRegisterButton" />
 		</div>
 	</div>
 {/if}
