@@ -110,11 +110,11 @@
 		</div>
 	</div>
 	<div class="bg-background p-12 mobile:p-6">
-		<h1 class="ebHeading text-3xl font-bold text-white mobile:mb-4 desktop:mb-12">
+		<h1 class="ebHeading mb-4 text-3xl font-bold text-white desktop:mb-12">
 			Meet the Executive Board
 		</h1>
 		<div
-			class="max-[844px]:grid-cols-2 grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
+			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
 		>
 			{#each $executiveBoardDataStore as ebData}
 				<div
@@ -169,5 +169,11 @@
 
 	.secGenPic {
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('/SecGenPic.jpeg');
+	}
+
+	@media (min-width: 646px) and (max-width: 844px) {
+		.homeCommitteeGrid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 	}
 </style>

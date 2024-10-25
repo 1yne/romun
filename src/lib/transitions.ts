@@ -91,6 +91,18 @@ export function transitions() {
 			delay: 0.5
 		}
 	);
+	gsap.from('#executiveBoardTitle', {
+		y: 40,
+		duration: 1,
+		opacity: 0,
+		ease: 'power2'
+	});
+	gsap.from(['#IMG1', '#IMG2', '#IMG3',], {
+		y: 40,
+		stagger: 0.3,
+		opacity: 0,
+		ease: 'power2'
+	});
 	gsap.from('#myVideo', {
 		opacity: 0,
 		duration: 0.5

@@ -8,7 +8,7 @@
 <Popover
 	class="w-64 text-sm font-montserrat"
 	{triggeredBy}
-	placement={`bottom${triggeredBy == ".committeeRegisterButton" ? "-end" : ""}`}
+	placement={`${triggeredBy == ".committeeRegisterButton" ? "right" : "bottom"}`}
 	offset={24}
 	transition={slide}
 >

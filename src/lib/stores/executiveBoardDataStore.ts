@@ -39,19 +39,19 @@ const data = [
   },
   {
     name: "Aryan Sood",
-    committee: "UNHRC",
+    committee: "HRC",
     position: "Chairperson",
     image: "/EBPics/AryanSood.jpeg"
   },
   {
     name: "Alisha Azeem",
-    committee: "UNHRC",
+    committee: "HRC",
     position: "Vice-Chairperson",
     image: "/EBPics/AlishaAzeem.jpeg"
   },
   {
     name: "Shreya Robin",
-    committee: "UNHRC",
+    committee: "HRC",
     position: "Moderator",
     image: "/EBPics/ShreyaRobin.jpeg"
   },
