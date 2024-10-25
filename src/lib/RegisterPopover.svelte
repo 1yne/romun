@@ -8,7 +8,7 @@
 <Popover
 	class="w-64 text-sm font-montserrat"
 	{triggeredBy}
-	placement="bottom"
+	placement={`bottom${triggeredBy == ".committeeRegisterButton" ? "-end" : ""}`}
 	offset={24}
 	transition={slide}
 >

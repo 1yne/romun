@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import { videoURLStore } from '$lib/stores/videoURLStore';
+	import RegisterPopover from '$lib/RegisterPopover.svelte';
 
 	onMount(() => transitions());
 
@@ -42,9 +43,10 @@
 				<p class="mt-4 w-1/2 text-white mobile:w-auto">{data.description}</p>
 			</div>
 			<div id="committeeRegister" class="mt-12">
-				<a href="/register" class="max-[844px]:mt-6 mt-24 text-white mobile:mt-5 desktop:mt-12 font-montserrat">
+				<a href="/register" class="max-[844px]:mt-6 mt-24 text-white mobile:mt-5 desktop:mt-12 font-montserrat committeeRegisterButton">
 					<span class="btn registerBtn border-0 border-solid px-12 py-4">Register</span>
 				</a>
+				<RegisterPopover triggeredBy=".committeeRegisterButton" />
 			</div>
 		</div>
 	</div>
