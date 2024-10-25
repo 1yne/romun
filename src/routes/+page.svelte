@@ -38,7 +38,7 @@
 			</div>
 			<div id="date">
 				<h1
-					class="max-[844px]:mt-3 max-[844px]:text-2xl mobile:mt-3 font-semibold text-white transition-all mobile:text-xl desktop:mt-5 desktop:text-3xl"
+					class="max-[844px]:mt-3 max-[844px]:text-2xl font-semibold text-white transition-all mobile:mt-3 mobile:text-xl desktop:mt-5 desktop:text-3xl"
 				>
 					November 15th-16th
 				</h1>
@@ -48,28 +48,37 @@
 	</div>
 	<div class="bg-background p-12 mobile:p-6">
 		<div class="divShadow letter flex min-h-[40rem] rounded-lg bg-white mobile:flex-col">
-			<div
-				class="secGenPic flex min-h-96 w-1/2 items-end rounded-lg bg-cover bg-center bg-no-repeat p-8 text-white mobile:w-full mobile:rounded-b-none"
-			>
-				<h1>Anurag Girish</h1>
-			</div>
-			<div class="w-1/2 p-8 mobile:w-full mobile:px-6">
+			
+			<div class="p-8 mobile:w-full mobile:px-6">
 				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
 				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit rerum inventore, deleniti
-					facilis, perspiciatis voluptas magnam eligendi commodi corporis id reprehenderit
-					consectetur doloremque eius laborum officiis aut asperiores, esse voluptates. Aliquam eum
-					totam fugiat adipisci modi, fuga maiores magnam commodi, accusamus optio expedita dolorum!
-					Reprehenderit, vel. Iure excepturi, nobis harum, sunt architecto numquam quas alias
-					consectetur doloremque ullam, non omnis! Dolorem natus rem explicabo esse. Hic
-					consequuntur possimus deserunt velit molestias maiores quia fugiat cupiditate? Quibusdam,
-					mollitia velit corporis dolor itaque impedit excepturi totam nemo architecto atque et cum
-					molestias. Porro ex provident suscipit nostrum autem sed dolorum, eveniet deserunt. At
-					labore sunt facere. Corporis, suscipit. Culpa incidunt optio, dicta quos sit dolorem,
-					voluptates explicabo labore omnis adipisci, odio laborum! Tempora laboriosam blanditiis
-					ipsam quidem accusantium dolores ex natus fugiat perferendis voluptates quo obcaecati
-					nihil, provident id quam vitae sequi porro hic aliquam totam. Facilis porro facere cum
-					sunt assumenda.
+					Dear Distinguished Delegates, Advisors, and Respected Guests, <br><br>It is with great pride and
+					enthusiasm that I extend a warm welcome to RoMUN 2024, hosted by Royale Concorde
+					International School. As we gather for this prestigious conference, we are not just
+					simulating the work of the United Nations but creating a space where your voices—those of
+					the next generation—will echo the call for change, progress, and global understanding.<br><br> In
+					a world fraught with complexity, where borders blur, and challenges transcend nations, the
+					words of Kofi Annan resonate: “You are never too young to lead, and never too old to
+					learn.” RoMUN 2024 embodies this belief, providing each of you with the opportunity to
+					lead, to learn, and to make an impact. This is more than an exercise in debate; it is a
+					platform where your ideas can shape tomorrow.<br><br> Over the course of this conference, you will
+					engage in deliberations that mirror the real world, where the stakes are high, and the
+					solutions are difficult. Through five thoughtfully designed committees, you will address
+					issues that require not just knowledge, but empathy, vision, and diplomacy. Whether
+					tackling international crises, advancing human rights, or forging paths toward
+					sustainability, your contributions will reflect the very essence of global leadership.<br><br> As
+					your Secretary General, I urge you to approach this experience with an open mind and an
+					unwavering commitment to understanding perspectives beyond your own. In this room,
+					diversity is our greatest strength. It is in the exchange of ideas, in the clashes and
+					collaborations, that we will find the seeds of real solutions to the world's most pressing
+					issues.<br><br> RoMUN 2024 is not just a conference—it is a community. The friendships you will
+					form, the insights you will gain, and the memories you will create here will stay with you
+					long after the final session. This is your moment to challenge yourself, to grow, and to
+					contribute meaningfully to our shared goal of a more peaceful, just, and equitable world.<br><br>
+					I eagerly anticipate the brilliance and innovation that each of you will bring to this
+					conference. Let us commit to making RoMUN 2024 a defining chapter in our shared journey
+					toward global cooperation and understanding.<br><br> Welcome to RoMUN 2024, where the future of
+					diplomacy begins with you.<br><br> Warmest regards,<br> Anurag G<br> Secretary General<br> RoMUN 2024
 				</p>
 			</div>
 		</div>
@@ -104,7 +113,7 @@
 			Meet the Executive Board
 		</h1>
 		<div
-			class="max-[844px]:grid-cols-2 grid desktop:grid-rows-2 mobile:grid-cols-1 desktop:grid-cols-5 mobile:gap-y-4"
+			class="max-[844px]:grid-cols-2 grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
 		>
 			{#each Array(10).keys() as num}
 				<div
