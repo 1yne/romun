@@ -87,7 +87,7 @@
 						>
 							<div class="committeeLogo" style:--logo="logo-{logo.name}">
 								{#if logo.name === 'CCC'}
-									<img src="/CCCLogoEdited.png" alt="" class="min-w-[200px]" />
+									<img src="/CCCLogo.png" alt="" class="min-w-[200px]" />
 								{:else}
 									<svelte:component this={logo.logo} {...props}></svelte:component>
 								{/if}
