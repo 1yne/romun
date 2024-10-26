@@ -74,11 +74,6 @@
 				>Location</a
 			>
 			<a
-				href="/"
-				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
-				on:click={() => (menuVisible = false)}>About</a
-			>
-			<a
 				href="/gallery"
 				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
 				on:click={() => (menuVisible = false)}>Gallery</a
