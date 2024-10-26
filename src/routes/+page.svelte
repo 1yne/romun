@@ -117,11 +117,12 @@
 			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
 		>
 			{#each $executiveBoardDataStore as ebData}
-				<div
-					class={`flex min-h-96 w-full items-end bg-black/35 bg-[url('${ebData.image}')] bg-cover bg-center bg-no-repeat p-6 bg-blend-overlay`}
-				>
-					<h1 class="text-white">{ebData.name}</h1>
-				</div>
+				<a href={`/committees/${ebData.committee}`} class="text-white relative flex flex-col border border-white/25 hover:border-white transition-all">
+					<img src={ebData.image} alt="" class="object-cover h-96 opacity-50 hover:opacity-100 transition-all" />
+					<div class="absolute bottom-6 left-4">
+						<h1>{ebData.name}</h1>
+					</div>
+				</a>
 			{/each}
 		</div>
 	</div>
