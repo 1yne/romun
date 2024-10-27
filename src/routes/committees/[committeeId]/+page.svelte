@@ -93,14 +93,14 @@
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
-						class="flex flex-col self-stretch"
+						class="flex flex-col self-stretch cursor-pointer"
 						id={`IMG${i}`}
 						on:click={() => {
 							ebModalOpen = true;
 							currentEBData = member;
 						}}
 					>
-						<img src={member.image} alt="" class="mb-2 h-96 rounded-lg object-cover" />
+						<img src={member.image} alt="" class="mb-2 h-96 rounded-lg object-cover border-white/25 border hover:border-white transition-all" />
 						<h1 class="text-2xl mobile:text-2xl">{member.name}</h1>
 						<h2 class="mobile:text-md text-lg">{member.position}</h2>
 					</div>
