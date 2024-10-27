@@ -63,7 +63,8 @@
 		</div>
 		<div class="links mt-12 inline-block">
 			<a
-				href="/"
+				href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing"
+				target="_blank"
 				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
 				on:click={() => (menuVisible = false)}>Country Matrix</a
 			>
@@ -83,10 +84,9 @@
 				class="link link--metis relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
 				on:click={() => (menuVisible = false)}>Contact Us</a
 			>
-			<a
-				href="/"
+			<button
 				class="link link--metis navbarRegisterButton relative mb-6 flex w-max pb-2 text-6xl font-semibold text-white before:content-[''] mobile:text-4xl"
-				on:click={() => (menuVisible = false)}>Register</a
+				>Register</button
 			>
 			<RegisterPopover triggeredBy=".navbarRegisterButton" />
 		</div>

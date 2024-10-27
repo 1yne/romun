@@ -41,23 +41,32 @@
 		<div id="committeeDescription">
 			<p class="mt-4 w-1/2 text-white mobile:w-auto mobile:text-sm">{data.description}</p>
 		</div>
-		<div id="committeeRegister" class="mt-12">
-			<a
-				href="/register"
-				class="max-[844px]:mt-6 committeeRegisterButton mt-24 font-montserrat text-white mobile:mt-5 desktop:mt-12"
-			>
-				<span class="btn registerBtn border-0 border-solid px-12 py-4">Register</span>
+		<div id="committeeRegister" class="mt-12 flex gap-4 font-montserrat mobile:flex-col">
+			<a href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing" target="_blank" class="mobile:w-full">
+				<button
+					class="rounded-lg bg-redHover p-6 px-12 text-sm transition-all hover:bg-red text-white mobile:w-full"
+					>Committee Matrix</button
+				>
 			</a>
-			<RegisterPopover triggeredBy=".committeeRegisterButton" />
+			<div class="mobile:w-full">
+				<button
+					class="committeeRegisterButton rounded-lg border border-white p-6 px-12 text-sm text-white transition-all mobile:w-full"
+				>
+					Register
+				</button>
+				<RegisterPopover triggeredBy=".committeeRegisterButton" />
+			</div>
 		</div>
 		<div class="mt-12 font-playfair text-white">
 			<h1 class="mb-4 text-4xl mobile:text-2xl" id="executiveBoardTitle">The Executive Board</h1>
-			<div class="grid w-full desktop:grid-cols-3 mobile:grid-cols-1 max-[844px]:grid-cols-2 items-stretch gap-4 committeeGrid">
+			<div
+				class="max-[844px]:grid-cols-2 committeeGrid grid w-full items-stretch gap-4 mobile:grid-cols-1 desktop:grid-cols-3"
+			>
 				{#each data.executiveBoardData as member, i}
 					<div class="flex flex-col self-stretch" id={`IMG${i}`}>
-						<img src={member.image} alt="" class="rounded-lg object-cover h-96 mb-2" />
+						<img src={member.image} alt="" class="mb-2 h-96 rounded-lg object-cover" />
 						<h1 class="text-2xl mobile:text-2xl">{member.name}</h1>
-						<h2 class="text-lg mobile:text-md">{member.position}</h2>
+						<h2 class="mobile:text-md text-lg">{member.position}</h2>
 					</div>
 				{/each}
 			</div>
@@ -89,5 +98,13 @@
 		.committeeGrid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
+	}
+
+	.committeeRegisterButton {
+		box-shadow: 1px 5px 20px 1px white inset;
+	}
+
+	.committeeRegisterButton:hover {
+		box-shadow: 1px 5px 20px 5px white inset;
 	}
 </style>

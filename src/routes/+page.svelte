@@ -119,7 +119,7 @@
 			{#each $executiveBoardDataStore as ebData}
 				<a href={`/committees/${ebData.committee}`} class="text-white relative flex flex-col border border-white/25 hover:border-white transition-all">
 					<img src={ebData.image} alt="" class="object-cover h-96 opacity-50 hover:opacity-100 transition-all" />
-					<div class="absolute bottom-6 left-4">
+					<div class="absolute bottom-4 left-4">
 						<h1>{ebData.name}</h1>
 					</div>
 				</a>
