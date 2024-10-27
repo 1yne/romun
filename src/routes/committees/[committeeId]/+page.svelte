@@ -3,15 +3,43 @@
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import RegisterPopover from '$lib/RegisterPopover.svelte';
+	import { Modal } from 'flowbite-svelte';
+	import type { EBDataType } from '$lib/stores/executiveBoardDataStore';
 
 	onMount(() => transitions());
 
 	export let data: PageData;
+
+	let currentEBData: EBDataType | null,
+		ebModalOpen = false;
 </script>
 
 <svelte:head>
 	<title>{data.name} | RoMUN 2024</title>
 </svelte:head>
+
+<Modal
+	color="#0d0d0d"
+	bodyClass="border-white/25 p-4 md:p-5 space-y-4 flex-1 overflow-y-auto overscroll-contain text-white"
+	bind:open={ebModalOpen}
+	title={currentEBData?.name}
+	class="!bg-background font-montserrat mobile:mt-24"
+	headerClass="text-white flex justify-between items-center p-4 md:p-5 rounded-t-lg"
+	outsideclose
+	autoclose
+>
+	<div class="flex gap-4 font-playfair mobile:flex-col">
+		<img
+			src={currentEBData?.image}
+			alt=""
+			class="h-96 w-48 rounded-lg object-cover mobile:w-full mobile:h-48"
+		/>
+		<div>
+			<h1 class="mb-4 text-lg">{currentEBData?.position} ({currentEBData?.committee})</h1>
+			<p class="text-md">{currentEBData?.bio}</p>
+		</div>
+	</div>
+</Modal>
 
 <img src={data.image} alt="" class="fixed -z-[100] h-full w-full" />
 <div class="bg-black/50 px-12 pb-12 pt-28 mobile:px-6">
@@ -62,7 +90,16 @@
 				class="max-[844px]:grid-cols-2 committeeGrid grid w-full items-stretch gap-4 mobile:grid-cols-1 desktop:grid-cols-3"
 			>
 				{#each data.executiveBoardData as member, i}
-					<div class="flex flex-col self-stretch" id={`IMG${i}`}>
+					<!-- svelte-ignore a11y-click-events-have-key-events -->
+					<!-- svelte-ignore a11y-no-static-element-interactions -->
+					<div
+						class="flex flex-col self-stretch"
+						id={`IMG${i}`}
+						on:click={() => {
+							ebModalOpen = true;
+							currentEBData = member;
+						}}
+					>
 						<img src={member.image} alt="" class="mb-2 h-96 rounded-lg object-cover" />
 						<h1 class="text-2xl mobile:text-2xl">{member.name}</h1>
 						<h2 class="mobile:text-md text-lg">{member.position}</h2>
