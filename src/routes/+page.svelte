@@ -50,8 +50,15 @@
 	<div class="bg-background p-12 mobile:p-6">
 		<div class="divShadow letter flex min-h-[40rem] rounded-lg bg-white mobile:flex-col">
 			<div class="p-8 mobile:w-full mobile:px-6">
-				<h1 class="mb-8 text-5xl">Letter from the Secretary-General</h1>
-				<p>
+				<div class="border-black/25 hover:border-black transition-all mobile:w-full mb-4 desktop:mr-4 rounded-lg float-left border">
+					<img
+						src="/SecGenPic.jpeg"
+						alt=""
+						class="h-96 rounded-lg object-cover"
+					/>
+				</div>
+				<h1 class="mb-8 text-justify text-5xl mobile:text-center">Letter from the Secretary-General</h1>
+				<p class="text-justify">
 					Dear Distinguished Delegates, Advisors, and Respected Guests, <br /><br />It is with great
 					pride and enthusiasm that I extend a warm welcome to RoMUN 2024, hosted by Royale Concorde
 					International School. As we gather for this prestigious conference, we are not just
