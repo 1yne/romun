@@ -21,7 +21,7 @@ export const actions = {
 
 		const { error } = await supabase.from('questions').insert(dataToSend);
 
-    if (error) throw error
+		if (error) throw error;
 
 		return { success: true };
 	}

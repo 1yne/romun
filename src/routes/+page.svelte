@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import { committeeDataStore } from '$lib/stores/committeeDataStore';
@@ -117,8 +117,15 @@
 			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
 		>
 			{#each $executiveBoardDataStore as ebData}
-				<a href={`/committees/${ebData.committee}`} class="text-white relative flex flex-col border border-white/25 hover:border-white transition-all">
-					<img src={ebData.image} alt="" class="object-cover h-96 opacity-50 hover:opacity-100 transition-all" />
+				<a
+					href={`/committees/${ebData.committee}`}
+					class="relative flex flex-col border border-white/25 text-white transition-all hover:border-white"
+				>
+					<img
+						src={ebData.image}
+						alt=""
+						class="h-96 object-cover opacity-50 transition-all hover:opacity-100"
+					/>
 					<div class="absolute bottom-4 left-4">
 						<h1>{ebData.name}</h1>
 					</div>

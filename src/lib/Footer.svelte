@@ -1,36 +1,39 @@
 <script>
-  import LogoGithub from "carbon-icons-svelte/lib/LogoGithub.svelte";
-	import LogoInstagram from "carbon-icons-svelte/lib/LogoInstagram.svelte";
-	import Email from "carbon-icons-svelte/lib/Email.svelte";
-	import Location from "carbon-icons-svelte/lib/Location.svelte";
-	import RegisterPopover from "./RegisterPopover.svelte";
+	import LogoGithub from 'carbon-icons-svelte/lib/LogoGithub.svelte';
+	import LogoInstagram from 'carbon-icons-svelte/lib/LogoInstagram.svelte';
+	import Email from 'carbon-icons-svelte/lib/Email.svelte';
+	import Location from 'carbon-icons-svelte/lib/Location.svelte';
+	import RegisterPopover from './RegisterPopover.svelte';
 </script>
 
-<div
-	class="footer flex flex-col gap-12 bg-background bg-cover bg-no-repeat p-12 font-montserrat"
->
-	<div class="w-full flex mobile:flex-col mobile:gap-4 justify-between text-white items-center bg-white/10 rounded-lg p-6 px-12 registerSection">
-		<h1 class="font-black text-3xl">Excited?</h1>
-		<button class="text-sm bg-redHover p-6 rounded-lg px-12 hover:bg-red transition-all footerRegisterButton">REGISTER</button>
+<div class="footer flex flex-col gap-12 bg-background p-12 font-montserrat text-white">
+	<div
+		class="registerSection flex w-full items-center justify-between rounded-lg bg-white/10 p-6 px-12 mobile:flex-col mobile:gap-4"
+	>
+		<h1 class="text-3xl font-black">Excited?</h1>
+		<button
+			class="footerRegisterButton rounded-lg bg-redHover p-6 px-12 text-sm transition-all hover:bg-red"
+			>REGISTER</button
+		>
 		<RegisterPopover triggeredBy=".footerRegisterButton" />
 	</div>
-	<div class="w-full flex gap-8 justify-between mobile:flex-col">
+	<div class="flex w-full justify-between gap-8 mobile:flex-col">
 		<div class="flex gap-8">
 			<a href="https://www.instagram.com/romun_24/" target="_blank" id="logoInstagram">
-				<LogoInstagram class="text-white transition-all hover:text-red" size={24}/>
+				<LogoInstagram class="transition-all hover:text-red" size={24} />
 			</a>
 			<a href="https://github.com/1yne/romun" target="_blank" id="logoGithub">
-				<LogoGithub class="text-white transition-all hover:text-red" size={24}  />
+				<LogoGithub class="transition-all hover:text-red" size={24} />
 			</a>
 			<a href="mailto:romuninfo@gmail.com" target="_blank" id="logoMail">
-				<Email class="text-white transition-all hover:text-red" size={24}  />
+				<Email class="transition-all hover:text-red" size={24} />
 			</a>
 			<a href="https://maps.app.goo.gl/dwNqaEW7vqiTdxvKA" target="_blank" id="logoLocation">
-				<Location class="text-white transition-all hover:text-red" size={24}  />
+				<Location class="transition-all hover:text-red" size={24} />
 			</a>
 		</div>
 		<div id="school">
-			<h1 class="text-white">Royale Concorde International School</h1>
+			<h1>Royale Concorde International School</h1>
 		</div>
 	</div>
 </div>

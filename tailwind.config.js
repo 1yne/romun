@@ -11,9 +11,9 @@ export default {
 	theme: {
 		screens: {
 			mobile: {
-				max: "645px"
+				max: '645px'
 			},
-			desktop: "845px"
+			desktop: '845px'
 		},
 		extend: {
 			colors: {

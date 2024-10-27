@@ -2,14 +2,9 @@
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
-	import { videoURLStore } from '$lib/stores/videoURLStore';
 	import RegisterPopover from '$lib/RegisterPopover.svelte';
 
 	onMount(() => transitions());
-
-	$: videoURL = $videoURLStore.filter(
-		(val) => val.pathname.substring(0, val.pathname.length - 9) == data.name
-	)[0]?.url;
 
 	export let data: PageData;
 </script>
@@ -42,9 +37,13 @@
 			<p class="mt-4 w-1/2 text-white mobile:w-auto mobile:text-sm">{data.description}</p>
 		</div>
 		<div id="committeeRegister" class="mt-12 flex gap-4 font-montserrat mobile:flex-col">
-			<a href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing" target="_blank" class="mobile:w-full">
+			<a
+				href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing"
+				target="_blank"
+				class="mobile:w-full"
+			>
 				<button
-					class="rounded-lg bg-redHover p-6 px-12 text-sm transition-all hover:bg-red text-white mobile:w-full"
+					class="rounded-lg bg-redHover p-6 px-12 text-sm text-white transition-all hover:bg-red mobile:w-full"
 					>Committee Matrix</button
 				>
 			</a>
@@ -75,25 +74,6 @@
 </div>
 
 <style>
-	.registerBtn {
-		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
-		outline: 1px solid;
-		outline-color: rgba(255, 255, 255, 0.5);
-		outline-offset: 0px;
-		text-shadow: none;
-		transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-	}
-
-	.registerBtn:hover {
-		border: 1px solid;
-		box-shadow:
-			inset 0 0 20px rgba(191, 6, 6, 0.5),
-			0 0 20px rgba(255, 255, 255, 0.2);
-		outline-color: rgba(255, 255, 255, 0);
-		outline-offset: 15px;
-		text-shadow: 1px 1px 2px #07a4e7;
-	}
-
 	@media (min-width: 646px) and (max-width: 844px) {
 		.committeeGrid {
 			grid-template-columns: repeat(2, minmax(0, 1fr));

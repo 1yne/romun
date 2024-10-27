@@ -3,26 +3,26 @@
 	import Navbar from '$lib/Navbar.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import { page } from '$app/stores';
-	import { onNavigate } from '$app/navigation'
+	import { onNavigate } from '$app/navigation';
 
-	$: classname = $page.route.id == "/" ? 'heroBG' : 'committeeBG';
+	$: classname = $page.route.id == '/' ? 'heroBG' : 'committeeBG';
 
 	onNavigate((navigation) => {
-		if (!document.startViewTransition) return
+		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
 			document.startViewTransition(async () => {
-				resolve()
-				await navigation.complete
-			})
-		})
-	})
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <div class={`${classname} h-screen`}>
 	<Navbar />
 	<slot></slot>
-	{#if $page.route.id === "/"}
+	{#if $page.route.id === '/'}
 		<Footer />
 	{/if}
 </div>

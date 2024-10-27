@@ -9,7 +9,7 @@ export const load: PageLoad = ({ params }) => {
 	)[0];
 	const executiveBoardData = get(executiveBoardDataStore).filter(
 		(val) => val.committee == params.committeeId.toLocaleUpperCase()
-	)
+	);
 	return {
 		...committeeData,
 		executiveBoardData

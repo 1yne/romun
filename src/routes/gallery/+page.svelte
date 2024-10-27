@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-  import { sineInOut } from 'svelte/easing';
+	import { sineInOut } from 'svelte/easing';
 
 	let animate = false;
 
