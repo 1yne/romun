@@ -23,7 +23,7 @@
 	bodyClass="border-white/25 p-4 md:p-5 space-y-4 flex-1 overflow-y-auto overscroll-contain text-white"
 	bind:open={ebModalOpen}
 	title={currentEBData?.name}
-	class="!bg-background font-montserrat mobile:mt-24"
+	class="!bg-background font-montserrat mt-24"
 	headerClass="text-white flex justify-between items-center p-4 md:p-5 rounded-t-lg"
 	outsideclose
 	autoclose
