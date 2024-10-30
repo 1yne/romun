@@ -5,6 +5,7 @@
 	import RegisterPopover from '$lib/RegisterPopover.svelte';
 	import { Modal } from 'flowbite-svelte';
 	import type { EBDataType } from '$lib/stores/executiveBoardDataStore';
+	import Typewriter from 'svelte-typewriter';
 
 	onMount(() => transitions());
 
@@ -23,7 +24,7 @@
 	bodyClass="border-white/25 p-4 md:p-5 space-y-4 flex-1 overflow-y-auto overscroll-contain text-white"
 	bind:open={ebModalOpen}
 	title={currentEBData?.name}
-	class="!bg-background font-montserrat mt-24"
+	class="mt-24 !bg-background font-montserrat"
 	headerClass="text-white flex justify-between items-center p-4 md:p-5 rounded-t-lg"
 	outsideclose
 	autoclose
@@ -32,7 +33,7 @@
 		<img
 			src={currentEBData?.image}
 			alt=""
-			class="h-96 w-48 rounded-lg object-cover mobile:w-full mobile:h-48"
+			class="h-96 w-48 rounded-lg object-cover mobile:h-48 mobile:w-full"
 		/>
 		<div>
 			<h1 class="mb-4 text-lg">{currentEBData?.position} ({currentEBData?.committee})</h1>
@@ -56,9 +57,10 @@
 		</div>
 		<div id="committeeAgenda">
 			<div
-				class="mt-3 rounded-lg border border-white/25 bg-black/25 p-2 px-4 transition-all hover:border-white"
+				class="mt-3 flex gap-2 rounded-lg border border-white/25 bg-black/25 p-2 px-4 text-xl text-white transition-all hover:border-white mobile:text-lg"
 			>
-				<h1 class="text-xl text-white mobile:text-lg">Agenda: {data.agenda}</h1>
+				<span>Agenda: </span>
+				<Typewriter mode="scramble" scrambleDuration={1400} delay={1200}><span>{data.agenda}</span></Typewriter>
 			</div>
 		</div>
 		<div id="committeeDescription">
@@ -93,14 +95,18 @@
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
-						class="flex flex-col self-stretch cursor-pointer"
+						class="flex cursor-pointer flex-col self-stretch"
 						id={`IMG${i}`}
 						on:click={() => {
 							ebModalOpen = true;
 							currentEBData = member;
 						}}
 					>
-						<img src={member.image} alt="" class="mb-2 h-96 rounded-lg object-cover border-white/25 border hover:border-white transition-all" />
+						<img
+							src={member.image}
+							alt=""
+							class="mb-2 h-96 rounded-lg border border-white/25 object-cover transition-all hover:border-white"
+						/>
 						<h1 class="text-2xl mobile:text-2xl">{member.name}</h1>
 						<h2 class="mobile:text-md text-lg">{member.position}</h2>
 					</div>
