@@ -48,11 +48,11 @@
 		</div>
 	</div>
 	<div class="bg-background p-12 mobile:p-6">
-		<div class="divShadow letter flex min-h-[40rem] rounded-lg bg-white mobile:flex-col">
+		<div class="divShadow letter flex min-h-[40rem] rounded-lg secGenWrapper text-white/70 mobile:flex-col">
 			<div class="p-8 mobile:w-full mobile:px-6">
-				<div class="border-black/25 hover:border-black transition-all mobile:w-full mb-4 desktop:mr-4 rounded-lg float-left border">
+				<div class="bg-white/75 transition-all mobile:w-full mb-4 desktop:mr-4 rounded-lg float-left">
 					<img
-						src="/SecGenPic.jpeg"
+						src="/SecGenPic.png"
 						alt=""
 						class="h-96 rounded-lg object-cover"
 					/>
@@ -182,13 +182,13 @@
 		background-color: rgba(41, 35, 92, 0.5);
 	}
 
-	.secGenPic {
-		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url('/SecGenPic.jpeg');
-	}
-
 	@media (min-width: 646px) and (max-width: 844px) {
 		.homeCommitteeGrid {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
+	}
+
+	.secGenWrapper {
+		background-color: rgba(13, 13, 13, 0.1);
 	}
 </style>
