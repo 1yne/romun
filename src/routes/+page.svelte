@@ -6,6 +6,7 @@
 	import { executiveBoardDataStore } from '$lib/stores/executiveBoardDataStore';
 	import RegisterButton from '$lib/RegisterButton.svelte';
 	import type { PageData } from './$types';
+	import ArrowDown from 'carbon-icons-svelte/lib/ArrowDown.svelte';
 
 	export let data: PageData;
 
@@ -29,35 +30,42 @@
 
 <div class="w-full pt-24 font-playfair">
 	<div class="heroSection flex">
-		<div class="flex w-full flex-col items-center text-center">
-			<div id="title">
-				<h1
-					class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-7xl desktop:text-9xl"
-				>
-					RoMUN 2024
-				</h1>
+		<div class="flex w-full flex-col items-center justify-between text-center">
+			<div class="flex w-full flex-col items-center text-center">
+				<div id="title">
+					<h1
+						class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-7xl desktop:text-9xl"
+					>
+						RoMUN 2024
+					</h1>
+				</div>
+				<div id="date">
+					<h1
+						class="max-[844px]:mt-3 max-[844px]:text-2xl font-semibold text-white transition-all mobile:mt-3 mobile:text-xl desktop:mt-5 desktop:text-3xl"
+					>
+						November 15th-16th
+					</h1>
+				</div>
+				<RegisterButton />
 			</div>
-			<div id="date">
-				<h1
-					class="max-[844px]:mt-3 max-[844px]:text-2xl font-semibold text-white transition-all mobile:mt-3 mobile:text-xl desktop:mt-5 desktop:text-3xl"
-				>
-					November 15th-16th
-				</h1>
+			<div class="pb-12 bounce">
+				<ArrowDown class="text-white" size={32} />
 			</div>
-			<RegisterButton />
 		</div>
 	</div>
 	<div class="bg-background p-12 mobile:p-6">
-		<div class="divShadow letter flex min-h-[40rem] rounded-lg secGenWrapper text-white/70 mobile:flex-col">
+		<div
+			class="divShadow letter secGenWrapper flex min-h-[40rem] rounded-lg text-white/70 mobile:flex-col"
+		>
 			<div class="p-8 mobile:w-full mobile:px-6">
-				<div class="bg-white/75 transition-all mobile:w-full mb-4 desktop:mr-4 rounded-lg float-left">
-					<img
-						src="/SecGenPic.png"
-						alt=""
-						class="h-96 rounded-lg object-cover"
-					/>
+				<div
+					class="float-left mb-4 rounded-lg bg-white/75 transition-all mobile:w-full desktop:mr-4"
+				>
+					<img src="/SecGenPic.png" alt="" class="h-96 rounded-lg object-cover" />
 				</div>
-				<h1 class="mb-8 text-justify text-5xl mobile:text-center">Letter from the Secretary-General</h1>
+				<h1 class="mb-8 text-justify text-5xl mobile:text-center">
+					Letter from the Secretary-General
+				</h1>
 				<p class="text-justify">
 					Dear Distinguished Delegates, Advisors, and Respected Guests, <br /><br />It is with great
 					pride and enthusiasm that I extend a warm welcome to RoMUN 2024, hosted by Royale Concorde
@@ -190,5 +198,22 @@
 
 	.secGenWrapper {
 		background-color: rgba(13, 13, 13, 0.1);
+	}
+
+	@keyframes bounce {
+		from {
+			transform: translate3d(0, -10px, 0);
+		}
+
+		to {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.bounce {
+		animation: bounce 0.5s;
+		animation-direction: alternate;
+		animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+		animation-iteration-count: infinite;
 	}
 </style>
