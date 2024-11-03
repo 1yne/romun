@@ -97,12 +97,6 @@ export function transitions() {
 		opacity: 0,
 		ease: 'power2'
 	});
-	gsap.from(['#IMG1', '#IMG2', '#IMG3'], {
-		y: 40,
-		stagger: 0.3,
-		opacity: 0,
-		ease: 'power2'
-	});
 	gsap.from(
 		[
 			'#contactHeading',
