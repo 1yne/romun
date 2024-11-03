@@ -49,7 +49,7 @@
 				<RegisterButton />
 			</div>
 			<div class="pb-12 bounce">
-				<ArrowDown class="text-white" size={32} />
+				<ArrowDown class="text-white" size={28} />
 			</div>
 		</div>
 	</div>
