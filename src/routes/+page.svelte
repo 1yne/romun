@@ -59,7 +59,7 @@
 		>
 			<div class="p-8 mobile:w-full mobile:px-6">
 				<div
-					class="float-left mb-4 rounded-lg bg-white/75 transition-all mobile:w-full desktop:mr-4"
+					class="float-left mb-8 rounded-lg bg-white/75 transition-all mobile:w-full desktop:mr-8"
 				>
 					<img src="/SecGenPic.png" alt="" class="h-96 rounded-lg object-cover" />
 				</div>
