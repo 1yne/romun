@@ -7,6 +7,7 @@
 	import RegisterButton from '$lib/RegisterButton.svelte';
 	import type { PageData } from './$types';
 	import ArrowDown from 'carbon-icons-svelte/lib/ArrowDown.svelte';
+	import { Carousel } from 'flowbite-svelte';
 
 	export let data: PageData;
 
@@ -18,6 +19,24 @@
 		fill: 'D60202',
 		width: 200
 	};
+
+	type CarouselImageType = {
+		src: string,
+		alt: string,
+		title: string
+	}
+
+	let images: CarouselImageType[] = []
+
+	let image: CarouselImageType
+
+	$: $executiveBoardDataStore.forEach((i) => {
+		images.push({
+			src: i.image,
+			alt: i.name,
+			title: i.name
+		})
+	})
 </script>
 
 <svelte:head>
@@ -129,7 +148,7 @@
 			Meet the Executive Board
 		</h1>
 		<div
-			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
+			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2 mobile:hidden"
 		>
 			{#each $executiveBoardDataStore as ebData}
 				<a
@@ -146,6 +165,14 @@
 					</div>
 				</a>
 			{/each}
+		</div>
+		<div class="ebCarousel hidden mobile:block">
+			<Carousel {images} duration={6000} let:Controls on:change={({ detail }) => (image = detail)}>
+				<Controls class="px-2" />
+			</Carousel>
+			<div class="rounded mt-4 border-white/25 border hover:border-white transition-all text-white p-2 my-2 text-center">
+				<h1 class="text-lg">{image?.alt}</h1>
+			</div>
 		</div>
 	</div>
 	<div class="committeeWrapper p-12 mobile:p-6">
@@ -193,6 +220,9 @@
 	@media (min-width: 646px) and (max-width: 844px) {
 		.homeCommitteeGrid {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+		.ebCarousel {
+			display: inline-block;
 		}
 	}
 
