@@ -63,7 +63,7 @@
 				>
 					<img src="/SecGenPic.png" alt="" class="h-96 rounded-lg object-cover" />
 				</div>
-				<h1 class="mb-8 text-justify text-5xl mobile:text-center">
+				<h1 class="mb-8 text-left text-5xl mobile:text-center">
 					Letter from the Secretary-General
 				</h1>
 				<p class="text-justify">
