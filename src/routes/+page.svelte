@@ -85,14 +85,17 @@
 				</div>
 				<RegisterButton />
 			</div>
-			<div class="bounce pb-12">
-				<ArrowDown class="text-white" size={28} />
+			<div class="bounce pb-12" id="scrollBtn">
+				<a href="#scrollBtn">
+					<ArrowDown class="text-white hover:text-red transition-all" size={28} />
+				</a>
 			</div>
 		</div>
 	</div>
-	<div class="bg-background p-12 mobile:p-6">
+	<div class="bg-background p-12 mobile:p-6" id="letterFromSecGen">
 		<div
 			class="divShadow letter secGenWrapper flex min-h-[40rem] rounded-lg text-white/70 mobile:flex-col"
+			
 		>
 			<div class="p-8 mobile:w-full mobile:px-6">
 				<div

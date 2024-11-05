@@ -10,3 +10,7 @@
 	--background: #0d0d0d;
 	--blue: #b9e1ff;
 }
+
+html {
+	scroll-behavior: smooth;
+}
