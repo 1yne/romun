@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="button primaryBtnStyle register registerButton relative mt-9 bg-none p-0 font-montserrat text-white transition-all"
+	class="button primaryBtnStyle register registerButton relative mt-9 mobile:mt-4 bg-none p-0 font-montserrat text-white transition-all"
 >
 	<div
 		class="buttonBG absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg bg-purple"

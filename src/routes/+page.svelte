@@ -8,6 +8,7 @@
 	import type { PageData } from './$types';
 	import ArrowDown from 'carbon-icons-svelte/lib/ArrowDown.svelte';
 	import { Carousel } from 'flowbite-svelte';
+	import Typewriter from 'svelte-typewriter';
 
 	export let data: PageData;
 
@@ -50,13 +51,30 @@
 <div class="w-full pt-24 font-playfair">
 	<div class="heroSection flex">
 		<div class="flex w-full flex-col items-center justify-between text-center">
-			<div class="flex w-full flex-col items-center text-center">
-				<div id="title">
-					<h1
-						class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-7xl desktop:text-9xl"
-					>
-						RoMUN 2024
-					</h1>
+			<div class="flex w-full flex-col items-center text-center h-full justify-center">
+				<div id="title" class="desktop:h-36 mobile:h-16">
+					<Typewriter mode="loop" cursor={false} interval={150} unwriteInterval={50}>
+						<h1
+							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
+						>
+							Unite. 
+						</h1>
+						<h1
+							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
+						>
+							Debate. 
+						</h1>
+						<h1
+							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
+						>
+							Lead.
+						</h1>
+						<h1
+							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
+						>
+							RoMUN 2024
+						</h1>
+					</Typewriter>
 				</div>
 				<div id="date">
 					<h1
@@ -67,7 +85,7 @@
 				</div>
 				<RegisterButton />
 			</div>
-			<div class="pb-12 bounce">
+			<div class="bounce pb-12">
 				<ArrowDown class="text-white" size={28} />
 			</div>
 		</div>
@@ -148,7 +166,7 @@
 			Meet the Executive Board
 		</h1>
 		<div
-			class="homeCommitteeGrid grid mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2 mobile:hidden"
+			class="homeCommitteeGrid grid mobile:hidden mobile:grid-cols-1 mobile:gap-y-4 desktop:grid-cols-5 desktop:grid-rows-2"
 		>
 			{#each $executiveBoardDataStore as ebData}
 				<a
@@ -170,7 +188,9 @@
 			<Carousel {images} duration={6000} let:Controls on:change={({ detail }) => (image = detail)}>
 				<Controls class="px-2" />
 			</Carousel>
-			<div class="rounded mt-4 border-white/25 border hover:border-white transition-all text-white p-2 my-2 text-center">
+			<div
+				class="my-2 mt-4 rounded border border-white/25 p-2 text-center text-white transition-all hover:border-white"
+			>
 				<h1 class="text-lg">{image?.alt}</h1>
 			</div>
 		</div>
