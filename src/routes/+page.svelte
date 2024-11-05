@@ -57,6 +57,11 @@
 						<h1
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
 						>
+							RoMUN 2024
+						</h1>
+						<h1
+							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
+						>
 							Unite. 
 						</h1>
 						<h1
@@ -68,11 +73,6 @@
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
 						>
 							Lead.
-						</h1>
-						<h1
-							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
-						>
-							RoMUN 2024
 						</h1>
 					</Typewriter>
 				</div>
