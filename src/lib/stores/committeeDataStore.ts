@@ -19,7 +19,8 @@ const data = [
 			settlements, and ensures compliance
 			with its binding resolutions, upholding
 			international law and contributing to
-			global stability.`
+			global stability.`,
+		backgroundGuide: "https://drive.google.com/file/d/1WGDNmleYe13xtFHNA8XevM485t2vOPm0/view?usp=sharing"
 	},
 	{
 		logo: HRCLogo,
@@ -34,7 +35,8 @@ const data = [
 			these rights and promoting justice and
 			dignity, especially in crises like the
 			Rohingya, weaving understanding into
-			hope for a more equitable world.`
+			hope for a more equitable world.`,
+		backgroundGuide: "https://drive.google.com/file/d/1I4SqvuhICu5UWERoSmwQYVpvGbfRtLH-/view?usp=sharing"
 	},
 	{
 		logo: UNSCLogo,
@@ -49,7 +51,8 @@ const data = [
 			frameworks to regulate these
 			technologies, ensuring international
 			stability and compliance with
-			humanitarian law.`
+			humanitarian law.`,
+		backgroundGuide: "https://drive.google.com/file/d/1DQdXffvOUcBenXHqdVdc8Mf3y6V_4lJh/view?usp=sharing"
 	},
 	{
 		logo: UNSCLogo,
@@ -66,7 +69,8 @@ const data = [
 			pushing participants to showcase their diplomatic agility 
 			and collaboration skills. It's a high-octane experience, 
 			perfect for those who relish a challenge and the 
-			unpredictability of real-world events.`
+			unpredictability of real-world events.`,
+		backgroundGuide: "https://drive.google.com/file/d/14-Jqds7nmAerdCuLFVPRO3DIi02EkTU9/view?usp=sharing"
 	},
 	{
 		logo: AIPPMLogo,
@@ -82,7 +86,8 @@ const data = [
 			accountability, and the rule of law to
 			preserve our democratic integrity and
 			ensure a fair electoral process for
-			future generations.`
+			future generations.`,
+		backgroundGuide: "https://drive.google.com/file/d/1q9Ey_OKpnYA0FKHnnlgpaIEfNqFaR-li/view?usp=sharing"
 	}
 ];
 

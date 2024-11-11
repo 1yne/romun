@@ -7,7 +7,7 @@
 	import RegisterButton from '$lib/RegisterButton.svelte';
 	import type { PageData } from './$types';
 	import ArrowDown from 'carbon-icons-svelte/lib/ArrowDown.svelte';
-	import { Carousel } from 'flowbite-svelte';
+	import { Carousel, Banner } from 'flowbite-svelte';
 	import Typewriter from 'svelte-typewriter';
 
 	export let data: PageData;
@@ -22,22 +22,22 @@
 	};
 
 	type CarouselImageType = {
-		src: string,
-		alt: string,
-		title: string
-	}
+		src: string;
+		alt: string;
+		title: string;
+	};
 
-	let images: CarouselImageType[] = []
+	let images: CarouselImageType[] = [];
 
-	let image: CarouselImageType
+	let image: CarouselImageType;
 
 	$: $executiveBoardDataStore.forEach((i) => {
 		images.push({
 			src: i.image,
 			alt: i.name,
 			title: i.name
-		})
-	})
+		});
+	});
 </script>
 
 <svelte:head>
@@ -48,11 +48,28 @@
 	/>
 </svelte:head>
 
+<Banner
+	id="bottom-banner"
+	position="fixed"
+	bannerType="bottom"
+	classDiv="!bg-black !border-t-white/50"
+>
+	<p class="flex items-center text-sm font-normal text-white">
+		<span>
+			<a
+				class="link text-purple"
+				href="https://docs.google.com/document/d/1v79TbHW5N5FakP6Ma5W52Nh3eMb6x05AMS4Ds_YhJg4/edit?fbclid=PAZXh0bgNhZW0CMTEAAaZWpwVQJ2mvFetiNr_PPoltlDoNPea1-E8OtlDn8C_L2QHObJSr2mI7Ikw_aem_hHoQ4X_t47AYBn4miYlUKQ&tab=t.gx3a0s2ewczk"
+				>Background guides</a
+			> and <a href="/" class="link text-purple">allotments</a> are out!
+		</span>
+	</p>
+</Banner>
+
 <div class="w-full pt-24 font-playfair">
 	<div class="heroSection flex">
 		<div class="flex w-full flex-col items-center justify-between text-center">
-			<div class="flex w-full flex-col items-center text-center h-full justify-center">
-				<div id="title" class="desktop:h-36 mobile:h-16">
+			<div class="flex h-full w-full flex-col items-center justify-center text-center">
+				<div id="title" class="mobile:h-16 desktop:h-36">
 					<Typewriter mode="loop" cursor={false} interval={150} unwriteInterval={50}>
 						<h1
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
@@ -62,12 +79,12 @@
 						<h1
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
 						>
-							Unite. 
+							Unite.
 						</h1>
 						<h1
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
 						>
-							Debate. 
+							Debate.
 						</h1>
 						<h1
 							class="max-[844px]:text-8xl font-montserrat font-black text-white transition-all mobile:text-5xl desktop:text-9xl"
@@ -85,9 +102,9 @@
 				</div>
 				<RegisterButton />
 			</div>
-			<div class="bounce pb-12" id="scrollBtn">
+			<div class="bounce pb-20" id="scrollBtn">
 				<a href="#scrollBtn">
-					<ArrowDown class="text-white hover:text-red transition-all" size={28} />
+					<ArrowDown class="text-white transition-all hover:text-red" size={28} />
 				</a>
 			</div>
 		</div>
@@ -95,7 +112,6 @@
 	<div class="bg-background p-12 mobile:p-6" id="letterFromSecGen">
 		<div
 			class="divShadow letter secGenWrapper flex min-h-[40rem] rounded-lg text-white/70 mobile:flex-col"
-			
 		>
 			<div class="p-8 mobile:w-full mobile:px-6">
 				<div
@@ -268,5 +284,33 @@
 		animation-direction: alternate;
 		animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
 		animation-iteration-count: infinite;
+	}
+
+	a.link {
+		position: relative;
+		outline: none !important;
+		transition: 0.2s;
+	}
+	a.link::after {
+		content: '';
+		background-color: black;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 1px;
+		width: 0;
+		transition: 0.2s;
+	}
+
+	span:hover {
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+	}
+
+	a.link:hover::after,
+	a.link:focus::after {
+		background-color: var(--purple);
+		width: 100%;
 	}
 </style>

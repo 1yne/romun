@@ -48,6 +48,16 @@
 		</div>
 		<div id="committeeRegister" class="mt-12 flex gap-4 font-montserrat mobile:flex-col">
 			<a
+				href={data.backgroundGuide}
+				target="_blank"
+				class="mobile:w-full"
+			>
+				<button
+					class="rounded-lg bg-purpleHover p-6 px-12 text-sm text-white transition-all hover:bg-purple mobile:w-full"
+					>Background Guide</button
+				>
+			</a>
+			<a
 				href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing"
 				target="_blank"
 				class="mobile:w-full"
