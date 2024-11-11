@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade, slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { transitions } from '$lib/transitions';
 	import { committeeDataStore } from '$lib/stores/committeeDataStore';
@@ -9,6 +9,7 @@
 	import ArrowDown from 'carbon-icons-svelte/lib/ArrowDown.svelte';
 	import { Carousel, Banner } from 'flowbite-svelte';
 	import Typewriter from 'svelte-typewriter';
+	import { quintOut } from 'svelte/easing';
 
 	export let data: PageData;
 
@@ -38,6 +39,8 @@
 			title: i.name
 		});
 	});
+
+	const params = { delay: 250, duration: 500, easing: quintOut };
 </script>
 
 <svelte:head>
@@ -53,6 +56,8 @@
 	position="fixed"
 	bannerType="bottom"
 	classDiv="!bg-black !border-t-white/50 banner"
+	transition={slide}
+	{params}
 >
 	<p class="flex items-center text-sm font-normal text-white">
 		<span>
