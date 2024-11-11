@@ -52,7 +52,7 @@
 	id="bottom-banner"
 	position="fixed"
 	bannerType="bottom"
-	classDiv="!bg-black !border-t-white/50"
+	classDiv="!bg-black !border-t-white/50 banner"
 >
 	<p class="flex items-center text-sm font-normal text-white">
 		<span>
@@ -60,7 +60,8 @@
 				class="link text-purple"
 				href="https://docs.google.com/document/d/1v79TbHW5N5FakP6Ma5W52Nh3eMb6x05AMS4Ds_YhJg4/edit?fbclid=PAZXh0bgNhZW0CMTEAAaZWpwVQJ2mvFetiNr_PPoltlDoNPea1-E8OtlDn8C_L2QHObJSr2mI7Ikw_aem_hHoQ4X_t47AYBn4miYlUKQ&tab=t.gx3a0s2ewczk"
 				>Background guides</a
-			> and <a href="/" class="link text-purple">allotments</a> are out!
+			>
+			and <a href="/" class="link text-purple">allotments</a> are out!
 		</span>
 	</p>
 </Banner>
@@ -312,5 +313,19 @@
 	a.link:focus::after {
 		background-color: var(--purple);
 		width: 100%;
+	}
+
+	:global(.banner > * > button) {
+		color: var(--purple);
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
+	}
+	:global(.banner > * > button:hover) {
+		background-color: rgba(255, 255, 255, 0.5);
+		color: var(--purpleHover);
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms;
 	}
 </style>
