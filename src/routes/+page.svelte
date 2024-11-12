@@ -62,11 +62,11 @@
 	<p class="flex items-center text-sm font-normal text-white">
 		<span>
 			<a
-				class="link text-purple"
+				class="link text-blue"
 				href="https://docs.google.com/document/d/1v79TbHW5N5FakP6Ma5W52Nh3eMb6x05AMS4Ds_YhJg4/edit?fbclid=PAZXh0bgNhZW0CMTEAAaZWpwVQJ2mvFetiNr_PPoltlDoNPea1-E8OtlDn8C_L2QHObJSr2mI7Ikw_aem_hHoQ4X_t47AYBn4miYlUKQ&tab=t.gx3a0s2ewczk"
 				>Background guides</a
 			>
-			and <a href="/" class="link text-purple">allotments</a> are out!
+			and <a href="https://docs.google.com/spreadsheets/d/1EEqgJ9hoTjJB892mLoqa-_JNS2Xk1XbWShcgRok9DC0/edit?usp=sharing" class="link text-blue">allotments</a> are out!
 		</span>
 	</p>
 </Banner>
@@ -316,7 +316,7 @@
 
 	a.link:hover::after,
 	a.link:focus::after {
-		background-color: var(--purple);
+		background-color: var(--blue);
 		width: 100%;
 	}
 
