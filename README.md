@@ -1,10 +1,38 @@
-# RoMUN 2024
+# sv
 
-The Model United Nations (MUN) competition at Royale Concorde International School is set to
-be an exhilarating and intellectually stimulating event, drawing students from various schools
-to engage in dynamic diplomatic simulations. The conference will feature a range of
-committees, each focusing on specific topics such as climate change, international security,
-and human rights, offering students a platform to showcase their research, public speaking,
-and problem-solving skills. With a dedicated team of faculty advisors and guest speakers
-providing guidance, the MUN at RCIS promises to be a hallmark of academic excellence and
-international awareness.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+
+## Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
+
+```bash
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

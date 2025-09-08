@@ -1,0 +1,68 @@
+/* Loading component */
+
+.loading:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	-webkit-animation: ellipsis steps(4, end) 900ms infinite;
+	animation: ellipsis steps(4, end) 900ms infinite;
+	content: '\2026';
+	width: 0px;
+}
+
+@keyframes ellipsis {
+	to {
+		width: 1.25em;
+	}
+}
+
+@-webkit-keyframes ellipsis {
+	to {
+		width: 1.25em;
+	}
+}
+
+/* ------------------------------------------------------- */
+
+/* Custom cursor */
+
+body,
+* {
+	cursor: none !important;
+}
+
+/* ------------------------------------------------------- */
+
+/* Search component */
+
+.searchBorder:hover > svg {
+	color: white;
+}
+
+@keyframes animateWidthIn {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 18rem;
+	}
+}
+
+@keyframes animateWidthOut {
+	0% {
+		width: 18rem;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+.searchInput:focus {
+	animation: animateWidthIn 0.25s forwards;
+}
+.searchInput:not(.searchInput:focus) {
+	animation: animateWidthOut 0.25s forwards;
+	animation-delay: 0.5s;
+}
+
+/* ------------------------------------------------------- */
