@@ -8,7 +8,7 @@
 
 <div class="h-full">
 	<div class="flex h-1/2 flex-col justify-between p-12 pt-20 text-black mobile:p-6 mobile:pt-20">
-		<h1 class="nyghtSerif flex justify-center text-[15vw] leading-none mobile:hidden">
+		<h1 class="nyghtSerif flex justify-center text-[14.5vw] leading-none mobile:hidden">
 			RoMUN 2025
 		</h1>
 		<div class="nyghtSerif hidden w-full leading-none mobile:block">
