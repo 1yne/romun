@@ -4,6 +4,10 @@
 	import { currentPictureState } from '$lib/components/Carousel/currentPicture.svelte';
 </script>
 
+<svelte:head>
+	<title>Committees | RoMUN 2025</title>
+</svelte:head>
+
 <div class="fixed top-0 h-full w-full px-12 py-6 mobile:px-6 mobile:pb-16">
 	<div class="flex h-full w-full mobile:hidden">
 		{#key $currentPictureState}

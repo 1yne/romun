@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Register | RoMUN 2025</title>
+</svelte:head>
+
 <div class="flex h-full w-full flex-col items-center justify-center">
 	<a href="https://forms.gle/nfTdeBBqZZnaid2WA" class="link link--ersa nyghtSerif style"><span>Individual Delegate</span></a>
 	<a href="https://forms.gle/C3nNpiaHVo2Tys5A8" class="link link--ersa nyghtSerif style"><span>Delegation</span></a>

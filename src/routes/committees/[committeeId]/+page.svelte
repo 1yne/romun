@@ -8,6 +8,10 @@
 	$inspect(committeeData);
 </script>
 
+<svelte:head>
+	<title>{$page.params.committeeId.toLocaleUpperCase()} | RoMUN 2025</title>
+</svelte:head>
+
 <div class="flex h-full w-full mobile:flex-col">
 	<div class="w-full hidden mobile:block h-full">
 		<img
