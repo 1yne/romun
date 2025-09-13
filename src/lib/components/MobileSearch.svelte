@@ -15,7 +15,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div>
 	<button
-		class={`flex ${$store.searchHover ? 'h-32 w-[calc(100vw-4rem)] px-6' : 'h-12 w-12'} items-left flex-col justify-center gap-4 rounded-3xl border border-white/50 bg-black/75 py-4 transition-all hover:border-white`}
+		class={`flex ${$store.searchHover ? 'h-48 w-[calc(100vw-4rem)] px-6' : 'h-12 w-12'} items-left flex-col justify-center gap-4 rounded-3xl border border-white/50 bg-black/75 py-4 transition-all hover:border-white`}
 		onclick={() => {
 			$store.searchHover = true;
 			time = new Date().getTime()
@@ -39,6 +39,13 @@
 				in:fly={{ y: 40, duration: 750, delay: 100, easing: backInOut }}
 				class="text-left font-montserrat uppercase text-white/50 transition-all hover:text-white"
 				>Register</a
+			>
+			<hr class="text-white/50" />
+			<a
+				href="https://docs.google.com/spreadsheets/d/1GkEe7XvZHeQqnCivft9qSg0pZhzDClgj2deLxR6LEbk/edit?usp=sharing"
+				in:fly={{ y: 40, duration: 750, delay: 100, easing: backInOut }}
+				class="text-left font-montserrat uppercase text-white/50 transition-all hover:text-white"
+				>Country Matrix</a
 			>
 		{:else}
 			<div in:fly={{ delay: 150, y: 40, easing: backInOut }} class="flex h-4 w-full justify-center">
