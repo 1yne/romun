@@ -19,7 +19,7 @@ export const topArrayState = writable([
 		description: `In Bharat, the All-India Political Parties Meet addresses critical issues. This forum fosters national dialogue, promoting transparency, accountability, and the rule of law to preserve our democratic integrity and ensure a fair electoral process for future generations.`
 	},
 	{
-		imageLink: '/images/CCC.jpg',
+		imageLink: '/images/CCC.jpeg',
 		name: 'CCC',
 		full: 'Continous Crisis Committee',
 		link: '/committees/ccc',
@@ -38,7 +38,7 @@ export const bottomArrayState = writable([
 		description: `In today's world, many suffer as fundamental human, social, and cultural rights are relinquished. The UNHRC stands as a global advocate, defending these rights and promoting justice and dignity, especially in crises like the Rohingya, weaving understanding into hope for a more equitable world.`
 	},
 	{
-		imageLink: '/images/UNSC.jpg',
+		imageLink: '/images/UNSC.avif',
 		name: 'UNSC',
 		full: 'United Nations Security Council',
 		link: '/committees/unsc',
@@ -57,7 +57,7 @@ export const allDataStore = writable([
 		description: `In today's world, many suffer as fundamental human, social, and cultural rights are relinquished. The UNHRC stands as a global advocate, defending these rights and promoting justice and dignity, especially in crises like the Rohingya, weaving understanding into hope for a more equitable world.`
 	},
 	{
-		imageLink: '/images/UNSC.jpg',
+		imageLink: '/images/UNSC.avif',
 		name: 'UNSC',
 		full: 'United Nations Security Council',
 		link: '/committees/unsc',
@@ -73,7 +73,7 @@ export const allDataStore = writable([
 		description: `In Bharat, the All-India Political Parties Meet addresses critical issues. This forum fosters national dialogue, promoting transparency, accountability, and the rule of law to preserve our democratic integrity and ensure a fair electoral process for future generations.`
 	},
 	{
-		imageLink: '/images/CCC.jpg',
+		imageLink: '/images/CCC.jpeg',
 		name: 'CCC',
 		full: 'Continous Crisis Committee',
 		link: '/committees/ccc',
