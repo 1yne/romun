@@ -5,7 +5,7 @@
 	import { currentPictureState, topArrayState, bottomArrayState } from './currentPicture.svelte';
 	import { goto } from '$app/navigation';
 
-	function moveUp() {
+	function moveLeft() {
 		if ($bottomArrayState.length != 0) {
 			$topArrayState.push($currentPictureState);
 			$currentPictureState = $bottomArrayState[0];
@@ -14,7 +14,7 @@
 			$topArrayState = $topArrayState;
 		}
 	}
-	function moveDown() {
+	function moveRight() {
 		if ($topArrayState.length != 0) {
 			$bottomArrayState.unshift($currentPictureState);
 			$currentPictureState = $topArrayState[$topArrayState.length - 1];
@@ -64,8 +64,8 @@
     />
   </div>
   <div class="flex justify-center gap-8 text-black/50 transition-all">
-    <ChevronLeft size={24} class="hover:text-black" onclick={moveUp} />
-    <ChevronRight size={24} class="hover:text-black" onclick={moveDown} />
+    <ChevronLeft size={24} class="hover:text-black" onclick={moveLeft} />
+    <ChevronRight size={24} class="hover:text-black" onclick={moveRight} />
   </div>
 </div>
 

@@ -15,14 +15,16 @@
 				<h1 class="nyghtSerif text-[9rem] leading-tight text-black">
 					{$currentPictureState.name}
 				</h1>
-				<p class="font-montserrat uppercase text-black text-center w-3/4">{$currentPictureState.agenda}</p>
+				<p class="w-3/4 text-center font-montserrat uppercase text-black">
+					{$currentPictureState.agenda}
+				</p>
 			</div>
 		{/key}
 		<div class="flex h-full w-1/2 items-center justify-center">
 			<Carousel />
 		</div>
 	</div>
-	<div class="hidden mobile:flex h-full w-full flex-col justify-between">
+	<div class="hidden h-full w-full flex-col justify-between mobile:flex">
 		<div class="h-full">
 			<MobileCarousel />
 		</div>

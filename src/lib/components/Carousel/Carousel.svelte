@@ -4,8 +4,9 @@
 	import { fly } from 'svelte/transition';
 	import { currentPictureState, topArrayState, bottomArrayState } from './currentPicture.svelte';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-	function moveUp() {
+	function moveDown() {
 		if ($bottomArrayState.length != 0) {
 			$topArrayState.push($currentPictureState);
 			$currentPictureState = $bottomArrayState[0];
@@ -14,7 +15,7 @@
 			$topArrayState = $topArrayState;
 		}
 	}
-	function moveDown() {
+	function moveUp() {
 		if ($topArrayState.length != 0) {
 			$bottomArrayState.unshift($currentPictureState);
 			$currentPictureState = $topArrayState[$topArrayState.length - 1];
@@ -23,6 +24,31 @@
 			$topArrayState = $topArrayState;
 		}
 	}
+
+	let interval: any,
+		direction = 'down';
+
+	onMount(() => {
+		setTimeout(() => {
+			interval = setInterval(() => {
+				console.log(direction, $bottomArrayState.length, $topArrayState.length);
+				if (direction == 'down') {
+					if ($bottomArrayState.length == 0) {
+						direction = 'up';
+					} else {
+						moveDown();
+					}
+				} else {
+					if ($topArrayState.length == 0) {
+						direction = 'down';
+					} else {
+						moveUp();
+					}
+				}
+			}, 5000);
+		}, 5000);
+		return () => clearInterval(interval)
+	});
 </script>
 
 <div class="flex h-full w-full items-center justify-center">
@@ -63,8 +89,16 @@
 	/>
 </div>
 <div class="flex flex-col gap-8 text-black/50">
-	<ChevronUp size={24} class={`${$topArrayState.length == 0 ? 'text-gray-500' : "hover:text-black transition-all"}`} onclick={moveDown} />
-	<ChevronDown size={24} class={` ${$bottomArrayState.length == 0 ? 'text-gray-500' : "hover:text-black transition-all"}`} onclick={moveUp} />
+	<ChevronUp
+		size={24}
+		class={`${$topArrayState.length == 0 ? 'text-gray-500' : 'transition-all hover:text-black'}`}
+		onclick={moveUp}
+	/>
+	<ChevronDown
+		size={24}
+		class={` ${$bottomArrayState.length == 0 ? 'text-gray-500' : 'transition-all hover:text-black'}`}
+		onclick={moveDown}
+	/>
 </div>
 
 <style>
