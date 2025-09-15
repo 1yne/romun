@@ -36,7 +36,7 @@
 />
 
 <svg
-	class ="z-[100] w-full h-full fixed"
+	class ="z-[100] w-full h-full fixed mobile:hidden"
 >
 	<circle cx={$coords1.x} cy={$coords1.y} r={$size} stroke={`${$store.searchHover ? "white" : "black"}`} stroke-width="1" fill-opacity="0"/>
 	<circle cx={$coords2.x} cy={$coords2.y} r={$size/4} fill={`${$store.searchHover ? "white" : "black"}`}/>
