@@ -13,7 +13,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div>
 	<button
-		class={`flex ${$store.searchHover ? 'h-48 w-[calc(100vw-4rem)] px-6' : 'h-12 w-12'} items-left flex-col justify-center gap-4 rounded-3xl border border-white/50 bg-black/75 py-4 transition-all hover:border-white`}
+		class={`flex ${$store.searchHover ? 'h-48 w-[calc(100vw-4rem)] px-6' : 'h-12 w-12'} items-left flex-col justify-center gap-4 rounded-3xl border border-white bg-black/75 py-4 transition-all`}
 		onclick={() => {
 			if ((new Date().getTime() - time) / 1000 > 0.05) {
 				$store.searchHover = true;
@@ -62,7 +62,7 @@
 		{:else}
 			<div in:fly={{ delay: 150, y: 40, easing: backInOut }} class="flex h-4 w-full justify-center">
 				<Menu
-					class={`text-white/50 transition-all ${$store.searchHover ? '!text-[#d60202]' : ''}`}
+					class="text-white transition-all"
 				/>
 			</div>
 		{/if}

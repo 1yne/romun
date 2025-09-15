@@ -10,7 +10,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div>
 	<button
-		class="flex h-12 w-4 hover:w-[30rem] items-center justify-center gap-4 rounded-3xl border border-white/50 bg-black/75 px-6 py-4 transition-all hover:border-white"
+		class="flex h-12 w-4 hover:w-[30rem] items-center justify-center gap-4 rounded-3xl border border-white bg-black/75 px-6 py-4 transition-all hover:border-white"
 		onmouseenter={() => ($store.searchHover = true)}
 		onmouseleave={() => ($store.searchHover = false)}
 	>
@@ -35,7 +35,7 @@
 			>
 		{:else}
 			<div in:fly={{ delay: 150, y: 40, easing: backInOut }}>
-				<Menu class={`text-white/50 transition-all ${$store.searchHover ? '!text-[#d60202]' : ''}`} />
+				<Menu class="text-white transition-all" />
 			</div>
 		{/if}
 	</button>
