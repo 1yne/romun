@@ -15,7 +15,7 @@
 				<h1 class="nyghtSerif text-[9rem] leading-tight text-black">
 					{$currentPictureState.name}
 				</h1>
-				<p class="font-montserrat uppercase text-black">{$currentPictureState.full}</p>
+				<p class="font-montserrat uppercase text-black text-center w-3/4">{$currentPictureState.agenda}</p>
 			</div>
 		{/key}
 		<div class="flex h-full w-1/2 items-center justify-center">
